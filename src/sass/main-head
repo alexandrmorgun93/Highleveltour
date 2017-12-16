@@ -1,0 +1,99 @@
+.main_head {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: rem(95px);
+  background-color: #081b4c;
+  opacity: 0.92;
+  display: flex;
+  align-items: center;
+  .container {
+    .main_head_wrap {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .menu_btn {
+        display: flex;
+        align-items: center;
+        &:hover {
+          p {
+            color: $orange_color;
+          }
+          .menu_btn_content {
+            li {
+              background-color: $orange_color;
+            }
+          }
+        }
+        p {
+          cursor: pointer;
+          transition: color .4s;
+          margin-left: rem(20px);
+          color: #ffffff;
+          font-size: rem(33px);
+          font-weight: 400;
+          line-height: 0.90;
+          font-family: $Sansus_Webissimo;
+          text-transform: uppercase;
+        }
+        .menu_btn_content {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          position: relative;
+          top: 0;
+          left: 0;
+          cursor: pointer;
+          li {
+            border-radius: rem(2px);
+            width: rem(34px);
+            height: 3px;
+            background-color: #fff;
+            transition: background-color .4s, transform .4s;
+
+            &:nth-child(2) {
+              margin: rem(8px) 0;
+            }
+          }
+
+          &.active {
+            &:first-child {
+              -webkit-transform: rotate(-411deg) translate(-15px, 1px);
+              transform: rotate(-411deg) translate(-15px, 1px);;
+            }
+            &:nth-child(2) {
+              opacity: 0;
+            }
+            &:last-child {
+              -webkit-transform: rotate(412deg) translate(-11px, 2px);
+              transform: rotate(412deg) translate(-11px, 2px);
+
+            }
+          }
+        }
+      }
+      .phone {
+        position: relative;
+        a {
+          color: #f0f0f0;
+          font-family: $Sansus_Webissimo;
+          font-size: rem(33px);
+          font-weight: 400;
+          line-height: 0.90;
+          letter-spacing: rem(1.32px);
+          &:hover {
+            color: $orange_color;
+            transition: color .4s;
+          }
+        }
+      }
+    }
+  }
+}

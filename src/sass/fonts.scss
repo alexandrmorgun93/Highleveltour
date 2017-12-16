@@ -1,0 +1,25 @@
+@font-face {
+  /*Roboto*/
+  font-family: 'Roboto';
+  src: url_css('fonts/Roboto/roboto-light.eot');
+  src: url_css('fonts/Roboto/roboto-light.eot#iefix') format('embedded-opentype'),
+  url_css('fonts/Roboto/roboto-light.woff2') format('woff2'),
+  url_css('fonts/Roboto/roboto-light.svg') format('svg'),
+  url_css('fonts/Roboto/roboto-light.ttf') format('truetype'),
+  url_css('fonts/Roboto/roboto-light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  /*SANSUS WEBISSIMO*/
+  font-family: 'Sansus Webissimo';
+  src: url_css('fonts/SansusWebissimo/Sansus-Webissimo.eot');
+  src: url_css('fonts/SansusWebissimo/Sansus-Webissimo.eot#iefix') format('embedded-opentype'),
+  url_css('fonts/SansusWebissimo/Sansus-Webissimo.woff2') format('woff2'),
+  url_css('fonts/SansusWebissimo/Sansus-Webissimo.svg') format('svg'),
+  url_css('fonts/SansusWebissimo/Sansus-Webissimo.ttf') format('truetype'),
+  url_css('fonts/SansusWebissimo/Sansus-Webissimo.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
