@@ -1,0 +1,75 @@
+.main_section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 100vh;
+  &::before {
+    @include before_fig(100%, 100%, rgba(7, 25, 71, 0.75));
+    z-index: 2;
+    background: linear-gradient(0deg, rgba(7, 25, 71, .75), transparent)
+  }
+  .parallax {
+    position: absolute;
+  }
+  .main_content-wrap {
+    width: 100%;
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    .main_content {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      h2 {
+        color: #fefeff;
+        font-family: $Sansus_Webissimo;
+        font-size: rem(64px);
+        font-weight: 400;
+        letter-spacing: rem(2.56px);
+      }
+      .main_title_item {
+        position: relative;
+        display: block;
+        color: $orange_color;
+        &::before {
+          @include before_fig(rem(88px), rem(1px), transparent);
+          background-color: $orange_color;
+          z-index: 1;
+          left: 60px;
+          top: 55%;
+        }
+        &::after {
+          @include before_fig(rem(88px), rem(1px), transparent);
+          z-index: 1;
+          background-color: $orange_color;
+          right: 60px;
+          top: 55%;
+        }
+      }
+      .arrow_down {
+        position: absolute;
+        bottom: rem(70px);
+        display: inline-flex;
+        justify-content: center;
+        align-self: center;
+        font-size: rem(20px);
+        color: $orange_color;
+        &::before {
+          @include before_fig(rem(1px), rem(70px), #fff);
+          top: rem(-75px);
+        }
+        i {
+          width: rem(41px);
+          height: (41px);
+          border: rem(1px) solid #dadada;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}

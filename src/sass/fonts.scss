@@ -23,6 +23,7 @@
   font-weight: 400;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'fontello';
   src: url_css('fonts/fontello/fontello.eot?84625563');
@@ -40,6 +41,7 @@
   font-style: normal;
   font-weight: normal;
   speak: none;
+
   display: inline-block;
   text-decoration: inherit;
   width: 1em;
@@ -63,6 +65,10 @@
 
 .icon-right-open:before {
   content: '\e802';
+}
+
+.icon-down-open:before {
+  content: '\e803';
 }
 
 .icon-left:before {
