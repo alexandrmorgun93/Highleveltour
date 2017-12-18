@@ -6,6 +6,7 @@
   &::before {
     @include before_fig(100%, 100%, rgba(7, 25, 71, 0.75));
     z-index: 2;
+    background: linear-gradient(0deg, rgba(7, 25, 71, .75), transparent)
   }
   .main_slide_wrap {
     width: 100%;
