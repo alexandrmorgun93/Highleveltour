@@ -12,6 +12,19 @@
 }
 
 @font-face {
+  /*Roboto-Bold*/
+  font-family: 'Roboto';
+  src: url_css('fonts/Roboto/bold/roboto-bold.eot');
+  src: url_css('fonts/Roboto/bold/roboto-bold.eot#iefix') format('embedded-opentype'),
+  url_css('fonts/Roboto/bold/roboto-bold.woff2') format('woff2'),
+  url_css('fonts/Roboto/bold/roboto-bold.svg') format('svg'),
+  url_css('fonts/Roboto/bold/roboto-bold.ttf') format('truetype'),
+  url_css('fonts/Roboto/bold/roboto-bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
   /*SANSUS WEBISSIMO*/
   font-family: 'Sansus Webissimo';
   src: url_css('fonts/SansusWebissimo/Sansus-Webissimo.eot');
@@ -69,6 +82,10 @@
 
 .icon-down-open:before {
   content: '\e803';
+}
+
+.icon-star:before {
+  content: '\e804';
 }
 
 .icon-left:before {

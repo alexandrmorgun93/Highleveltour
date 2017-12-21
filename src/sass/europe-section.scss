@@ -1,0 +1,247 @@
+.europe_section {
+  width: 100%;
+  position: relative;
+  background-color: #fafafa;
+  z-index: 3;
+  padding-bottom: rem(100px);
+  .container {
+    .region_content {
+      position: relative;
+      width: 100%;
+      .select_region {
+        width: 100%;
+        position: relative;
+        height: rem(130px);
+        background-color: #071947;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 3;
+        .btn {
+          z-index: 4;
+          max-width: rem(357px);
+          border: 1px solid $orange_color;
+          background-color: transparent;
+          .icon_up {
+            transform: rotate(180deg);
+          }
+          &:hover {
+            background-color: $orange_color;
+          }
+        }
+      }
+      .region_content_wrap {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 0;
+        background-color: #fff;
+        padding: rem(135px) rem(75px) rem(80px);
+        visibility: hidden;
+        opacity: 0;
+        transition: .4s;
+        &.active {
+          visibility: visible;
+          opacity: 1;
+        }
+        .region_content_elem {
+          padding: rem(50px) rem(60px) rem(60px);
+          border-bottom: rem(1px) solid $orange_color;
+          &:first-child {
+            border-top: rem(1px) solid $orange_color;
+          }
+          h3 {
+            color: $orange_color;
+            text-transform: uppercase;
+            font-family: $Sansus_Webissimo;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 1.5;
+            margin-bottom: rem(40px);
+          }
+          .region_list {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            ul {
+              display: flex;
+              flex-direction: column;
+              li {
+                margin-bottom: rem(35px);
+                &:hover {
+                  a {
+                    color: $orange_color
+                  }
+                }
+
+                &:last-child {
+                  margin-bottom: 0;
+                }
+                a {
+                  position: relative;
+                  display: inline-block;
+                  color: #071947;
+                  font-family: $Roboto;
+                  font-size: 18px;
+                  font-weight: 300;
+                  line-height: 1.6;
+                  letter-spacing: rem(0.72px);
+                  transition: color .4s;
+                  &::before {
+                    @include before_fig (rem(13px), rem(1px), $orange_color);
+                    bottom: rem(-15px);
+                    left: 0;
+                    transition: .4s;
+                  }
+                  &:hover::before {
+                    color: $orange_color;
+                    width: 100%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .region_control {
+      position: relative;
+      display: flex;
+      margin-top: rem(50px);
+      a {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: rem(41px);
+        height: rem(41px);
+        border: rem(1px) solid $orange_color;
+        color: $orange_color;
+        font-family: $Sansus_Webissimo;
+        background-color: transparent;
+        font-size: rem(20px);
+        font-weight: 400;
+        line-height: 1.5;
+        margin-left: rem(15px);
+        transition: background-color .4s, color .4s;
+        &:first-child {
+          margin-left: 0;
+        }
+        &:hover {
+          background-color: $orange_color;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+
+}
+
+.slide_europe {
+  width: 100%;
+  position: relative;
+  margin-top: rem(50px);
+  .slide_europe_content {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: rem(500px);
+    .slide_europe_img {
+      position: relative;
+      max-width: rem(937px);
+      width: 100%;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .slide_europe_text {
+      max-width: rem(583px);
+      width: 100%;
+      padding: rem(65px) rem(50px) rem(50px);
+      background-color: #fff;
+      h2 {
+        font-family: $Sansus_Webissimo;
+        font-size: rem(35px);
+        font-weight: 400;
+        line-height: 0.85;
+        text-transform: uppercase;
+        letter-spacing: rem(1.4px);
+        margin-bottom: rem(28px);
+        text-align: center;
+      }
+      .star {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: rem(38px);
+        i {
+          color: #ffd521;
+          font-size: rem(35px);
+        }
+      }
+      h3 {
+        color: $black_color;
+        font-family: $Roboto;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 30px;
+        letter-spacing: 0.8px;
+        margin-bottom: rem(30px);
+        text-align: center;
+      }
+      p {
+        color: $black_color;
+        font-family: $Roboto;
+        font-size: rem(20px);
+        font-weight: 300;
+        line-height: 1.5;
+        letter-spacing: rem(0.8px);
+        margin-bottom: rem(40px);
+        max-height: rem(85px);
+        overflow: hidden;
+      }
+      .text_h {
+        max-height: rem(115px);
+      }
+      .btn_wrap {
+        display: flex;
+        justify-content: center;
+        .btn {
+          max-width: rem(357px);
+          border: rem(1px) solid $orange_color;
+          i {
+            margin-left: rem(20px);
+          }
+        }
+      }
+    }
+  }
+  .slide_control {
+    position: absolute;
+    bottom: 5%;
+    left: 4%;
+    width: rem(109px);
+    height: rem(50px);
+    background-color: #071947;
+    opacity: 0.75;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    button {
+      border: none;
+      background-color: transparent;
+      font-size: rem(30px);
+      color: #ffffff;
+      transition: color .4s;
+      &:hover {
+        color: $orange_color;
+      }
+
+    }
+  }
+}

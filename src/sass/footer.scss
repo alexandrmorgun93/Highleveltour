@@ -27,8 +27,14 @@
               letter-spacing: rem(0.64px);
               text-transform: uppercase;
               transition: color .4s;
-              &:hover {
-                color: $orange_color;
+              &:before {
+                @include before_fig(0, rem(1px), $orange_color);
+                bottom: rem(-4px);
+                left: 0;
+                transition: .3s;
+              }
+              &:hover::before {
+                width: 100%;
               }
             }
             &:first-child {

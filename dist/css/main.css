@@ -80,12 +80,39 @@ abbr, acronym {
     background-color: #ec6826;
     color: #fff; }
 
+.france_text {
+  text-indent: 1.25rem;
+  font-family: "Roboto";
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1.7; }
+  .france_text b {
+    font-family: "Sansus Webissimo";
+    font-weight: 400;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase; }
+
+.main_title {
+  color: #fefeff;
+  font-family: "Sansus Webissimo";
+  font-size: 4rem;
+  font-weight: 400;
+  letter-spacing: 0.16rem; }
+
 @font-face {
   /*Roboto*/
   font-family: 'Roboto';
   src: url("../../fonts/Roboto/roboto-light.eot");
   src: url("../../fonts/Roboto/roboto-light.eot#iefix") format("embedded-opentype"), url("../../fonts/Roboto/roboto-light.woff2") format("woff2"), url("../../fonts/Roboto/roboto-light.svg") format("svg"), url("../../fonts/Roboto/roboto-light.ttf") format("truetype"), url("../../fonts/Roboto/roboto-light.woff") format("woff");
   font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  /*Roboto-Bold*/
+  font-family: 'Roboto';
+  src: url("../../fonts/Roboto/bold/roboto-bold.eot");
+  src: url("../../fonts/Roboto/bold/roboto-bold.eot#iefix") format("embedded-opentype"), url("../../fonts/Roboto/bold/roboto-bold.woff2") format("woff2"), url("../../fonts/Roboto/bold/roboto-bold.svg") format("svg"), url("../../fonts/Roboto/bold/roboto-bold.ttf") format("truetype"), url("../../fonts/Roboto/bold/roboto-bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal; }
 
 @font-face {
@@ -131,6 +158,9 @@ abbr, acronym {
 
 .icon-down-open:before {
   content: '\E803'; }
+
+.icon-star:before {
+  content: '\E804'; }
 
 .icon-left:before {
   content: '\E806'; }
@@ -367,6 +397,71 @@ abbr, acronym {
           line-height: 0.66;
           letter-spacing: 0.05rem; }
 
+.feedback_section {
+  position: relative;
+  width: 100%;
+  overflow: hidden; }
+  .feedback_section::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #071947;
+    opacity: 0.86;
+    z-index: 1; }
+  .feedback_section .parallax {
+    position: absolute; }
+  .feedback_section .feedback_content {
+    padding: 8.125rem 0 5.625rem;
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .feedback_section .feedback_content h3 {
+      color: #ffffff;
+      font-family: "Sansus Webissimo";
+      font-size: 2.5rem;
+      font-weight: 400;
+      line-height: 0.75;
+      letter-spacing: 0.1rem;
+      margin-bottom: 3.625rem; }
+    .feedback_section .feedback_content .feedback {
+      margin-top: 6.25rem;
+      max-width: 59.375rem;
+      width: 100%;
+      display: flex;
+      background-color: transparent;
+      flex-wrap: wrap;
+      justify-content: space-between; }
+      .feedback_section .feedback_content .feedback input, .feedback_section .feedback_content .feedback textarea {
+        max-width: 28.375rem;
+        height: 3.125rem;
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        margin-bottom: 1.875rem;
+        border-bottom: 0.0625rem solid #7383a9;
+        color: #d3d3d3;
+        font-family: "Roboto";
+        font-size: 1.25rem;
+        font-weight: 300;
+        line-height: 1.5; }
+      .feedback_section .feedback_content .feedback textarea {
+        min-width: 100%;
+        max-width: 100%;
+        min-height: 5.3125rem;
+        margin-bottom: 4.6875rem; }
+    .feedback_section .feedback_content .btn {
+      max-width: 22.3125rem;
+      background-color: transparent;
+      border: 0.0625rem solid #ec6826;
+      margin: 0 auto; }
+      .feedback_section .feedback_content .btn:hover {
+        background-color: #ec6826; }
+
 .top_section {
   width: 100%;
   position: relative;
@@ -390,9 +485,13 @@ abbr, acronym {
       position: relative;
       z-index: 3;
       display: flex;
-      overflow: hidden; }
-      .top_section .container .top_section_wrap .top_content:hover .content {
-        bottom: auto; }
+      overflow: hidden;
+      transition: .4s; }
+      .top_section .container .top_section_wrap .top_content:hover {
+        transition: .4s; }
+        .top_section .container .top_section_wrap .top_content:hover .content {
+          bottom: 0;
+          transition: bottom .4s; }
       .top_section .container .top_section_wrap .top_content img {
         width: 100%;
         height: 100%;
@@ -404,7 +503,7 @@ abbr, acronym {
         width: 100%;
         height: 100%;
         bottom: -63%;
-        transition: bottom 4s; }
+        transition: bottom .4s; }
         .top_section .container .top_section_wrap .top_content .content .content_elem {
           padding: 3.75rem 3.125rem 0 4.375rem;
           width: 100%;
@@ -573,8 +672,18 @@ abbr, acronym {
             letter-spacing: 0.04rem;
             text-transform: uppercase;
             transition: color .4s; }
-            .main_footer .container .footer_wrap .left_footer ul li a:hover {
-              color: #ec6826; }
+            .main_footer .container .footer_wrap .left_footer ul li a:before {
+              content: "";
+              display: block;
+              position: absolute;
+              width: 0;
+              height: 0.0625rem;
+              background-color: #ec6826;
+              bottom: -0.25rem;
+              left: 0;
+              transition: .3s; }
+            .main_footer .container .footer_wrap .left_footer ul li a:hover::before {
+              width: 100%; }
           .main_footer .container .footer_wrap .left_footer ul li:first-child {
             margin-left: 0; }
       .main_footer .container .footer_wrap .left_footer p {
@@ -645,16 +754,14 @@ abbr, acronym {
       flex-direction: column;
       text-align: center;
       justify-content: center; }
-      .main_section .main_content-wrap .main_content h2 {
-        color: #fefeff;
+      .main_section .main_content-wrap .main_content .main_title_item {
+        position: relative;
+        display: block;
+        color: #ec6826;
         font-family: "Sansus Webissimo";
         font-size: 4rem;
         font-weight: 400;
         letter-spacing: 0.16rem; }
-      .main_section .main_content-wrap .main_content .main_title_item {
-        position: relative;
-        display: block;
-        color: #ec6826; }
         .main_section .main_content-wrap .main_content .main_title_item::before {
           content: "";
           display: block;
@@ -677,6 +784,15 @@ abbr, acronym {
           background-color: #ec6826;
           right: 60px;
           top: 55%; }
+      .main_section .main_content-wrap .main_content p {
+        color: #ffffff;
+        font-family: "Roboto";
+        font-size: 1.375rem;
+        font-weight: 300;
+        line-height: 1.63;
+        letter-spacing: 0.055rem; }
+      .main_section .main_content-wrap .main_content .title {
+        margin: 6.25rem 0 6.25rem; }
       .main_section .main_content-wrap .main_content .arrow_down {
         position: absolute;
         bottom: 4.375rem;
@@ -693,12 +809,338 @@ abbr, acronym {
           height: 4.375rem;
           background-color: #fff;
           top: -4.6875rem; }
-        .main_section .main_content-wrap .main_content .arrow_down i {
+        .main_section .main_content-wrap .main_content .arrow_down a {
           width: 2.5625rem;
           height: 41px;
           border: 0.0625rem solid #dadada;
           display: flex;
           align-items: center;
           justify-content: center; }
+
+.france_top {
+  width: 100%;
+  position: relative;
+  overflow: hidden; }
+  .france_top .parallax {
+    position: absolute; }
+  .france_top .container .france_info_wrap {
+    width: 100%;
+    position: relative;
+    padding: 9.375rem 0; }
+    .france_top .container .france_info_wrap .france_info_content {
+      width: 100%;
+      position: relative;
+      display: flex;
+      justify-content: flex-end; }
+      .france_top .container .france_info_wrap .france_info_content .info_text {
+        position: relative;
+        background-color: #fff;
+        padding: 3.9375rem; }
+        .france_top .container .france_info_wrap .france_info_content .info_text p {
+          max-width: 28.4375rem;
+          width: 100%; }
+      .france_top .container .france_info_wrap .france_info_content .info_img_wrap {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        max-width: 47.1875rem;
+        top: -2.5rem;
+        width: 100%; }
+        .france_top .container .france_info_wrap .france_info_content .info_img_wrap .info_img {
+          position: relative;
+          overflow: hidden;
+          max-width: 23.125rem;
+          height: 19.375rem;
+          width: 100%; }
+          .france_top .container .france_info_wrap .france_info_content .info_img_wrap .info_img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; }
+          .france_top .container .france_info_wrap .france_info_content .info_img_wrap .info_img:nth-child(2) {
+            top: 7.5rem; }
+
+.reverse {
+  flex-direction: row-reverse; }
+  .reverse .text_revers {
+    height: 24.375rem;
+    top: 1.875rem; }
+  .reverse .img_reverse {
+    flex-direction: row-reverse; }
+    .reverse .img_reverse:nth-child(2) {
+      top: 9.6875rem; }
+
+.france_day {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 37.625rem; }
+  .france_day::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(7, 25, 71, 0.75);
+    z-index: 2;
+    background: linear-gradient(0deg, rgba(7, 25, 71, 0.75), transparent); }
+  .france_day .parallax {
+    position: absolute; }
+  .france_day .france_day_title {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    bottom: 5rem;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: flex-end; }
+    .france_day .france_day_title h2 {
+      color: #ec6826;
+      font-family: "Sansus Webissimo";
+      font-size: 4rem;
+      font-weight: 400;
+      letter-spacing: 0.16rem; }
+    .france_day .france_day_title p {
+      color: #ffffff;
+      font-family: "Roboto";
+      font-size: 2.0625rem;
+      font-weight: 300;
+      letter-spacing: 0.0825rem; }
+
+.france_day_content {
+  margin-top: 4.6875rem;
+  width: 100%;
+  position: relative; }
+  .france_day_content .container {
+    width: 100%; }
+    .france_day_content .container p {
+      text-align: center;
+      width: 70%;
+      margin: 3.125rem auto;
+      color: #071947; }
+    .france_day_content .container .france_day_img {
+      margin-top: 4.375rem;
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 4.6875rem; }
+      .france_day_content .container .france_day_img .day_img_elem {
+        max-width: 17.5rem;
+        width: 100%;
+        height: 17.5rem;
+        position: relative;
+        overflow: hidden; }
+        .france_day_content .container .france_day_img .day_img_elem img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover; }
+
+.europe_section {
+  width: 100%;
+  position: relative;
+  background-color: #fafafa;
+  z-index: 3;
+  padding-bottom: 6.25rem; }
+  .europe_section .container .region_content {
+    position: relative;
+    width: 100%; }
+    .europe_section .container .region_content .select_region {
+      width: 100%;
+      position: relative;
+      height: 8.125rem;
+      background-color: #071947;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 3; }
+      .europe_section .container .region_content .select_region .btn {
+        z-index: 4;
+        max-width: 22.3125rem;
+        border: 1px solid #ec6826;
+        background-color: transparent; }
+        .europe_section .container .region_content .select_region .btn .icon_up {
+          transform: rotate(180deg); }
+        .europe_section .container .region_content .select_region .btn:hover {
+          background-color: #ec6826; }
+    .europe_section .container .region_content .region_content_wrap {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 0;
+      background-color: #fff;
+      padding: 8.4375rem 4.6875rem 5rem;
+      visibility: hidden;
+      opacity: 0;
+      transition: .4s; }
+      .europe_section .container .region_content .region_content_wrap.active {
+        visibility: visible;
+        opacity: 1; }
+      .europe_section .container .region_content .region_content_wrap .region_content_elem {
+        padding: 3.125rem 3.75rem 3.75rem;
+        border-bottom: 0.0625rem solid #ec6826; }
+        .europe_section .container .region_content .region_content_wrap .region_content_elem:first-child {
+          border-top: 0.0625rem solid #ec6826; }
+        .europe_section .container .region_content .region_content_wrap .region_content_elem h3 {
+          color: #ec6826;
+          text-transform: uppercase;
+          font-family: "Sansus Webissimo";
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 1.5;
+          margin-bottom: 2.5rem; }
+        .europe_section .container .region_content .region_content_wrap .region_content_elem .region_list {
+          width: 100%;
+          display: flex;
+          justify-content: space-between; }
+          .europe_section .container .region_content .region_content_wrap .region_content_elem .region_list ul {
+            display: flex;
+            flex-direction: column; }
+            .europe_section .container .region_content .region_content_wrap .region_content_elem .region_list ul li {
+              margin-bottom: 2.1875rem; }
+              .europe_section .container .region_content .region_content_wrap .region_content_elem .region_list ul li:hover a {
+                color: #ec6826; }
+              .europe_section .container .region_content .region_content_wrap .region_content_elem .region_list ul li:last-child {
+                margin-bottom: 0; }
+              .europe_section .container .region_content .region_content_wrap .region_content_elem .region_list ul li a {
+                position: relative;
+                display: inline-block;
+                color: #071947;
+                font-family: "Roboto";
+                font-size: 18px;
+                font-weight: 300;
+                line-height: 1.6;
+                letter-spacing: 0.045rem;
+                transition: color .4s; }
+                .europe_section .container .region_content .region_content_wrap .region_content_elem .region_list ul li a::before {
+                  content: "";
+                  display: block;
+                  position: absolute;
+                  width: 0.8125rem;
+                  height: 0.0625rem;
+                  background-color: #ec6826;
+                  bottom: -0.9375rem;
+                  left: 0;
+                  transition: .4s; }
+                .europe_section .container .region_content .region_content_wrap .region_content_elem .region_list ul li a:hover::before {
+                  color: #ec6826;
+                  width: 100%; }
+  .europe_section .container .region_control {
+    position: relative;
+    display: flex;
+    margin-top: 3.125rem; }
+    .europe_section .container .region_control a {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 2.5625rem;
+      height: 2.5625rem;
+      border: 0.0625rem solid #ec6826;
+      color: #ec6826;
+      font-family: "Sansus Webissimo";
+      background-color: transparent;
+      font-size: 1.25rem;
+      font-weight: 400;
+      line-height: 1.5;
+      margin-left: 0.9375rem;
+      transition: background-color .4s, color .4s; }
+      .europe_section .container .region_control a:first-child {
+        margin-left: 0; }
+      .europe_section .container .region_control a:hover {
+        background-color: #ec6826;
+        color: #ffffff; }
+
+.slide_europe {
+  width: 100%;
+  position: relative;
+  margin-top: 3.125rem; }
+  .slide_europe .slide_europe_content {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 31.25rem; }
+    .slide_europe .slide_europe_content .slide_europe_img {
+      position: relative;
+      max-width: 58.5625rem;
+      width: 100%; }
+      .slide_europe .slide_europe_content .slide_europe_img img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; }
+    .slide_europe .slide_europe_content .slide_europe_text {
+      max-width: 36.4375rem;
+      width: 100%;
+      padding: 4.0625rem 3.125rem 3.125rem;
+      background-color: #fff; }
+      .slide_europe .slide_europe_content .slide_europe_text h2 {
+        font-family: "Sansus Webissimo";
+        font-size: 2.1875rem;
+        font-weight: 400;
+        line-height: 0.85;
+        text-transform: uppercase;
+        letter-spacing: 0.0875rem;
+        margin-bottom: 1.75rem;
+        text-align: center; }
+      .slide_europe .slide_europe_content .slide_europe_text .star {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2.375rem; }
+        .slide_europe .slide_europe_content .slide_europe_text .star i {
+          color: #ffd521;
+          font-size: 2.1875rem; }
+      .slide_europe .slide_europe_content .slide_europe_text h3 {
+        color: #2c313f;
+        font-family: "Roboto";
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 30px;
+        letter-spacing: 0.8px;
+        margin-bottom: 1.875rem;
+        text-align: center; }
+      .slide_europe .slide_europe_content .slide_europe_text p {
+        color: #2c313f;
+        font-family: "Roboto";
+        font-size: 1.25rem;
+        font-weight: 300;
+        line-height: 1.5;
+        letter-spacing: 0.05rem;
+        margin-bottom: 2.5rem;
+        max-height: 5.3125rem;
+        overflow: hidden; }
+      .slide_europe .slide_europe_content .slide_europe_text .text_h {
+        max-height: 7.1875rem; }
+      .slide_europe .slide_europe_content .slide_europe_text .btn_wrap {
+        display: flex;
+        justify-content: center; }
+        .slide_europe .slide_europe_content .slide_europe_text .btn_wrap .btn {
+          max-width: 22.3125rem;
+          border: 0.0625rem solid #ec6826; }
+          .slide_europe .slide_europe_content .slide_europe_text .btn_wrap .btn i {
+            margin-left: 1.25rem; }
+  .slide_europe .slide_control {
+    position: absolute;
+    bottom: 5%;
+    left: 4%;
+    width: 6.8125rem;
+    height: 3.125rem;
+    background-color: #071947;
+    opacity: 0.75;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .slide_europe .slide_control button {
+      border: none;
+      background-color: transparent;
+      font-size: 1.875rem;
+      color: #ffffff;
+      transition: color .4s; }
+      .slide_europe .slide_control button:hover {
+        color: #ec6826; }
 
 /*# sourceMappingURL=main.css.map*/

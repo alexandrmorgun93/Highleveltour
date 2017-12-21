@@ -23,17 +23,14 @@
       flex-direction: column;
       text-align: center;
       justify-content: center;
-      h2 {
-        color: #fefeff;
-        font-family: $Sansus_Webissimo;
-        font-size: rem(64px);
-        font-weight: 400;
-        letter-spacing: rem(2.56px);
-      }
       .main_title_item {
         position: relative;
         display: block;
         color: $orange_color;
+        font-family: $Sansus_Webissimo;
+        font-size: rem(64px);
+        font-weight: 400;
+        letter-spacing: rem(2.56px);
         &::before {
           @include before_fig(rem(88px), rem(1px), transparent);
           background-color: $orange_color;
@@ -49,6 +46,20 @@
           top: 55%;
         }
       }
+
+      p {
+        color: #ffffff;
+        font-family: $Roboto;
+        font-size: rem(22px);
+        font-weight: 300;
+        line-height: 1.63;
+        letter-spacing: rem(0.88px);
+      }
+
+      .title {
+        margin: rem(100px) 0 rem(100px);
+      }
+
       .arrow_down {
         position: absolute;
         bottom: rem(70px);
@@ -61,7 +72,7 @@
           @include before_fig(rem(1px), rem(70px), #fff);
           top: rem(-75px);
         }
-        i {
+        a {
           width: rem(41px);
           height: (41px);
           border: rem(1px) solid #dadada;

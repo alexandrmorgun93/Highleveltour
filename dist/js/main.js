@@ -84,10 +84,18 @@ module.exports = __webpack_require__(4);
     /*BEGIN PARALLAX*/
     const Parallax = __webpack_require__(2);
     let p = new Parallax('.parallax', {
-        intensity:80
+        intensity: 80
     }).init();
 
     /*END PARALLAX*/
+    // begin region menu
+    let regionList = document.querySelector('.btn_region');
+    let region = document.querySelector('.region_content_wrap');
+
+    regionList.addEventListener('click', function () {
+        region.classList.toggle('active');
+    });
+    // end region menu
 
 })();
 

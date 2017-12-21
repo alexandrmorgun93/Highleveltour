@@ -3,7 +3,8 @@
   width: 100%;
   margin: 0 auto;
 }
-.btn{
+
+.btn {
   width: 100%;
   height: rem(50px);
   color: $orange_color;
@@ -22,4 +23,27 @@
     background-color: $orange_color;
     color: #fff;
   }
+}
+
+//FRANCE TEXT
+.france_text {
+  text-indent: rem(20px);
+  font-family: $Roboto;
+  font-size: rem(20px);
+  font-weight: 300;
+  line-height: 1.7;
+  b {
+    font-family: $Sansus_Webissimo;
+    font-weight: 400;
+    letter-spacing: rem(0.8px);
+    text-transform: uppercase;
+  }
+}
+
+.main_title {
+  color: #fefeff;
+  font-family: $Sansus_Webissimo;
+  font-size: rem(64px);
+  font-weight: 400;
+  letter-spacing: rem(2.56px);
 }
