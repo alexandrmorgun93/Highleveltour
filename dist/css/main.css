@@ -99,6 +99,20 @@ abbr, acronym {
   font-weight: 400;
   letter-spacing: 0.16rem; }
 
+.line {
+  position: relative;
+  width: 17.4375rem;
+  height: 0.0625rem;
+  background-color: #ec6826; }
+  .line span {
+    position: absolute;
+    left: -0.3125rem;
+    top: -0.1875rem;
+    width: 3.3125rem;
+    height: 0.4375rem;
+    border-radius: 0.25rem;
+    background-color: #ec6826; }
+
 @font-face {
   /*Roboto*/
   font-family: 'Roboto';
@@ -790,7 +804,9 @@ abbr, acronym {
         font-size: 1.375rem;
         font-weight: 300;
         line-height: 1.63;
-        letter-spacing: 0.055rem; }
+        letter-spacing: 0.055rem;
+        max-width: 54.0625rem;
+        width: 100%; }
       .main_section .main_content-wrap .main_content .title {
         margin: 6.25rem 0 6.25rem; }
       .main_section .main_content-wrap .main_content .arrow_down {
@@ -1142,5 +1158,168 @@ abbr, acronym {
       transition: color .4s; }
       .slide_europe .slide_control button:hover {
         color: #ec6826; }
+
+.visa_support {
+  position: relative;
+  width: 100%;
+  background-color: #fafafa;
+  padding: 7.25rem 0; }
+  .visa_support .container .visa_support_content {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    overflow: hidden; }
+    .visa_support .container .visa_support_content .visa_support_elem {
+      width: 100%;
+      min-height: 35.75rem;
+      overflow: hidden;
+      position: relative;
+      display: flex; }
+      .visa_support .container .visa_support_content .visa_support_elem .visa_support_img {
+        position: relative;
+        max-width: 52.6875rem;
+        width: 100%; }
+        .visa_support .container .visa_support_content .visa_support_elem .visa_support_img img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover; }
+      .visa_support .container .visa_support_content .visa_support_elem .visa_support_text {
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        position: relative;
+        max-width: 42.375rem;
+        width: 100%;
+        padding: 5rem 8.125rem; }
+        .visa_support .container .visa_support_content .visa_support_elem .visa_support_text .line_img_reverse {
+          display: flex;
+          flex-direction: row-reverse; }
+        .visa_support .container .visa_support_content .visa_support_elem .visa_support_text h2 {
+          color: #2c313f;
+          font-family: "Sansus Webissimo";
+          font-size: 2.1875rem;
+          font-weight: 400;
+          line-height: 0.85;
+          text-transform: uppercase;
+          letter-spacing: 0.0875rem;
+          margin-bottom: 3.4375rem; }
+        .visa_support .container .visa_support_content .visa_support_elem .visa_support_text p {
+          max-width: 25.5625rem;
+          width: 100%;
+          color: #2c313f;
+          font-family: "Roboto";
+          font-size: 1.25rem;
+          font-weight: 300;
+          line-height: 1.7;
+          max-height: 12.1875rem;
+          overflow: hidden;
+          margin-top: 2.8125rem;
+          margin-bottom: 1.5625rem; }
+        .visa_support .container .visa_support_content .visa_support_elem .visa_support_text .btn {
+          align-self: flex-end;
+          max-width: 11rem;
+          background-color: #fff;
+          border: 0.0625rem solid #ec6826; }
+          .visa_support .container .visa_support_content .visa_support_elem .visa_support_text .btn:hover {
+            background-color: #ec6826; }
+
+.reverse_support {
+  flex-direction: row-reverse; }
+
+.visa_support_bottom {
+  position: relative;
+  width: 100%;
+  overflow: hidden; }
+  .visa_support_bottom::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    opacity: 0.85;
+    z-index: 1; }
+  .visa_support_bottom .parallax {
+    position: absolute; }
+  .visa_support_bottom .bottom_elem {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    text-align: center;
+    padding: 5rem 0 4.375rem; }
+    .visa_support_bottom .bottom_elem p {
+      color: #ec6826;
+      font-family: "Sansus Webissimo";
+      font-size: 2.5rem;
+      font-weight: 400;
+      line-height: 0.75;
+      letter-spacing: 0.1rem; }
+      .visa_support_bottom .bottom_elem p:first-child {
+        margin-bottom: 1.875rem; }
+
+.hotel_booking {
+  width: 100%;
+  position: relative;
+  background-color: #fafafa;
+  padding: 6.25rem 0; }
+  .hotel_booking .container .hotel_booking_wrap {
+    width: 100%;
+    position: relative; }
+    .hotel_booking .container .hotel_booking_wrap .hotel_booking_elem {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      display: flex; }
+      .hotel_booking .container .hotel_booking_wrap .hotel_booking_elem:nth-child(even) {
+        flex-direction: row-reverse; }
+      .hotel_booking .container .hotel_booking_wrap .hotel_booking_elem img {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        position: absolute; }
+      .hotel_booking .container .hotel_booking_wrap .hotel_booking_elem .booking_content {
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        width: 50%;
+        background-color: rgba(8, 27, 76, 0.66);
+        height: 27.9375rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 4.0625rem;
+        overflow: hidden; }
+        .hotel_booking .container .hotel_booking_wrap .hotel_booking_elem .booking_content h2 {
+          text-align: center;
+          color: #ffffff;
+          font-family: "Sansus Webissimo";
+          font-size: 2.1875rem;
+          font-weight: 400;
+          line-height: 0.85;
+          text-transform: uppercase;
+          letter-spacing: 0.0875rem;
+          margin-bottom: 1.875rem; }
+        .hotel_booking .container .hotel_booking_wrap .hotel_booking_elem .booking_content p {
+          text-align: center;
+          color: #ffffff;
+          font-family: "Sansus Webissimo";
+          font-size: 1.25rem;
+          font-weight: 400;
+          line-height: 2;
+          letter-spacing: 0.8px;
+          margin-bottom: 1.875rem; }
+        .hotel_booking .container .hotel_booking_wrap .hotel_booking_elem .booking_content .btn {
+          max-width: 22.3125rem;
+          background-color: transparent;
+          border: 0.0625rem solid #ec6826; }
+          .hotel_booking .container .hotel_booking_wrap .hotel_booking_elem .booking_content .btn:hover {
+            background-color: #ec6826; }
 
 /*# sourceMappingURL=main.css.map*/

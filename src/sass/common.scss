@@ -47,3 +47,24 @@
   font-weight: 400;
   letter-spacing: rem(2.56px);
 }
+
+.line {
+  position: relative;
+  width: rem(279px);
+  height: rem(1px);
+  background-color: $orange_color;
+  span {
+    position: absolute;
+    left: rem(-5px);
+    top: rem(-3px);
+    width: rem(53px);
+    height: rem(7px);
+    border-radius: rem(4px);
+    background-color: $orange_color;
+  }
+  //&:nth-child(2n+2) {
+  //  span {
+  //    right: rem(-5px);
+  //  }
+  //}
+}

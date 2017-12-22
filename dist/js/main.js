@@ -84,7 +84,7 @@ module.exports = __webpack_require__(4);
     /*BEGIN PARALLAX*/
     const Parallax = __webpack_require__(2);
     let p = new Parallax('.parallax', {
-        intensity: 80
+        intensity: 70
     }).init();
 
     /*END PARALLAX*/
