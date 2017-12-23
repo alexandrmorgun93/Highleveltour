@@ -37,35 +37,62 @@
           align-items: center;
           padding: rem(65px);
           overflow: hidden;
-          //.line_block {
-          //  position: absolute;
-          //  top: rem(76px);
-          //  z-index: 3;
-          //  width: 80%;
-          //  height: rem(319px);
-          //  background-color: transparent;
-          //  span {
-          //    position: absolute;
-          //
-          //    //background-color: #f0f0f0;
-          //    &:first-child {
-          //      bottom: 80px;
-          //    }
-          //    &:nth-child(2) {
-          //      transform: rotate(90deg);
-          //      width: 319px;
-          //      right: -80px;
-          //    }
-          //    &:nth-child(3) {
-          //      transform: rotate(90deg);
-          //      left: -80px;
-          //      width: 319px;
-          //    }
-          //    &:nth-child(4) {
-          //      top: 80px;
-          //    }
-          //  }
-          //}
+          &:hover {
+            .line_block {
+              i {
+                opacity: 1;
+                &:first-child {
+                  width: 100%;
+                }
+                &:nth-child(2) {
+                  height: 100%;
+                }
+                &:nth-child(3) {
+                  height: 100%;
+                }
+                &:last-child {
+                  width: 100%;
+                }
+              }
+            }
+          }
+
+          .line_block {
+            position: absolute;
+            top: rem(50px);
+            width: 84%;
+            height: rem(340px);
+            background-color: transparent;
+            i {
+              display: block;
+              transition: .5s;
+              position: absolute;
+              opacity: 0;
+              background-color: #f0f0f0;
+              height: rem(1px);
+              &:first-child {
+                left: 0;
+                width: 0;
+              }
+              &:nth-child(2) {
+                left: 0;
+                top: 0;
+                width: rem(1px);
+                height: 0;
+                transition-delay: .3s;
+              }
+              &:nth-child(3) {
+                right: 0;
+                width: rem(1px);
+                height: 0;
+                transition-delay: .3s;
+              }
+              &:last-child {
+                bottom: 0;
+                width: 0;
+              }
+            }
+          }
 
           h2 {
             text-align: center;

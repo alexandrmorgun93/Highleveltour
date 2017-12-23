@@ -61,6 +61,12 @@ abbr, acronym {
   width: 100%;
   margin: 0 auto; }
 
+.container_visa {
+  max-width: 71.25rem;
+  width: 100%;
+  position: relative;
+  margin: 0 auto; }
+
 .btn {
   width: 100%;
   height: 3.125rem;
@@ -112,6 +118,73 @@ abbr, acronym {
     height: 0.4375rem;
     border-radius: 0.25rem;
     background-color: #ec6826; }
+
+.contacts_wrap {
+  padding: 5.625rem 3.75rem 2.8125rem;
+  background-color: #fff;
+  max-width: 46.625rem;
+  width: 100%;
+  position: relative;
+  display: flex; }
+  .contacts_wrap .contacts_content {
+    width: 100%;
+    display: flex;
+    flex-direction: column; }
+    .contacts_wrap .contacts_content .contacts_title {
+      font-family: "Sansus Webissimo";
+      font-size: 1.875rem;
+      font-weight: 400;
+      letter-spacing: 1.2px;
+      color: #ec6826;
+      text-align: center; }
+    .contacts_wrap .contacts_content .contacts_description {
+      color: #2c313f;
+      font-family: "Roboto";
+      font-size: 1.25rem;
+      font-weight: 300;
+      line-height: 1.8;
+      text-align: center;
+      margin-bottom: 1.75rem; }
+    .contacts_wrap .contacts_content .contacts_line {
+      display: block;
+      width: 100%;
+      height: 0.0625rem;
+      background-color: #ec6826; }
+    .contacts_wrap .contacts_content .contacts_info {
+      margin-top: 1.9375rem;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 3.4375rem; }
+      .contacts_wrap .contacts_content .contacts_info .contacts_email, .contacts_wrap .contacts_content .contacts_info .contacts_phone {
+        display: flex;
+        flex-direction: column; }
+        .contacts_wrap .contacts_content .contacts_info .contacts_email a, .contacts_wrap .contacts_content .contacts_info .contacts_phone a {
+          font-family: "Sansus Webissimo";
+          color: #2c313f;
+          font-size: 1.25rem;
+          font-weight: 400;
+          line-height: 1.5;
+          letter-spacing: 0.05rem; }
+          .contacts_wrap .contacts_content .contacts_info .contacts_email a span, .contacts_wrap .contacts_content .contacts_info .contacts_phone a span {
+            color: #ec6826; }
+    .contacts_wrap .contacts_content .social {
+      margin-top: 2.625rem;
+      display: flex;
+      position: relative;
+      align-items: center;
+      margin-left: 3.125rem; }
+      .contacts_wrap .contacts_content .social a {
+        color: #ec6826;
+        font-size: 1.5625rem;
+        transition: transform .4s; }
+        .contacts_wrap .contacts_content .social a:hover {
+          transform: scale(1.2); }
+      .contacts_wrap .contacts_content .social .btn {
+        cursor: pointer;
+        max-width: 22.3125rem;
+        border: 0.0625rem solid #ec6826;
+        margin-left: 2.1875rem; }
 
 @font-face {
   /*Roboto*/
@@ -506,6 +579,12 @@ abbr, acronym {
         .top_section .container .top_section_wrap .top_content:hover .content {
           bottom: 0;
           transition: bottom .4s; }
+          .top_section .container .top_section_wrap .top_content:hover .content .content_elem .line_home {
+            right: 0;
+            opacity: 1; }
+          .top_section .container .top_section_wrap .top_content:hover .content .content_elem .btn {
+            left: 0;
+            opacity: 1; }
       .top_section .container .top_section_wrap .top_content img {
         width: 100%;
         height: 100%;
@@ -525,24 +604,23 @@ abbr, acronym {
           position: relative;
           z-index: 4;
           display: flex;
-          flex-direction: column; }
+          flex-direction: column;
+          justify-content: flex-end; }
           .top_section .container .top_section_wrap .top_content .content .content_elem h2 {
+            text-align: center;
             color: #2c313f;
             font-family: "Sansus Webissimo";
             font-size: 2.1875rem;
             font-weight: 400;
             line-height: 0.85;
             text-transform: uppercase;
-            margin-bottom: 1.25rem; }
-          .top_section .container .top_section_wrap .top_content .content .content_elem .img_line {
-            max-width: 18rem;
-            width: 100%;
-            height: 0.375rem;
-            margin-bottom: 1.375rem; }
-            .top_section .container .top_section_wrap .top_content .content .content_elem .img_line img {
-              width: 100%;
-              height: 100%;
-              object-fit: cover; }
+            margin-bottom: 1.875rem; }
+          .top_section .container .top_section_wrap .top_content .content .content_elem .line_home {
+            right: -100%;
+            transition: right .4s linear;
+            transition-delay: .1s;
+            opacity: 0;
+            margin-bottom: 0.9375rem; }
           .top_section .container .top_section_wrap .top_content .content .content_elem ul {
             margin-bottom: 3.75rem; }
             .top_section .container .top_section_wrap .top_content .content .content_elem ul li {
@@ -564,10 +642,16 @@ abbr, acronym {
                 top: 20px;
                 z-index: 1; }
           .top_section .container .top_section_wrap .top_content .content .content_elem .btn {
+            position: relative;
+            left: -50%;
             max-width: 4.75rem;
             border: 1px solid #ec6826;
             font-size: 1.125rem;
-            align-self: flex-end; }
+            align-self: flex-end;
+            margin-bottom: 1.875rem;
+            opacity: 0;
+            transition: left .4s linear;
+            transition-delay: .3s; }
 
 .map_content {
   width: 100%;
@@ -597,66 +681,84 @@ abbr, acronym {
     .map_content .contacts .container {
       display: flex;
       justify-content: flex-end; }
-      .map_content .contacts .container .contacts_wrap {
-        padding: 5.625rem 3.75rem 2.8125rem;
-        background-color: #fff;
-        max-width: 46.625rem;
+
+.contacts_main {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 100vh; }
+  .contacts_main .parallax {
+    position: absolute; }
+  .contacts_main .contacts_main_map {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+
+.contacts_workers {
+  padding: 6.25rem 0; }
+  .contacts_workers .container .workers_content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center; }
+    .contacts_workers .container .workers_content .workers_elem {
+      max-width: 30.5625rem;
+      flex: 1 1 40%;
+      width: 100%;
+      padding: 2.5rem 4.375rem; }
+      .contacts_workers .container .workers_content .workers_elem .workers_elem_img {
         width: 100%;
-        position: relative;
-        display: flex; }
-        .map_content .contacts .container .contacts_wrap .contacts_content {
+        height: 25.9375rem;
+        overflow: hidden; }
+        .contacts_workers .container .workers_content .workers_elem .workers_elem_img img {
           width: 100%;
-          display: flex;
-          flex-direction: column; }
-          .map_content .contacts .container .contacts_wrap .contacts_content .contacts_title {
-            font-family: "Sansus Webissimo";
-            font-size: 1.875rem;
-            font-weight: 400;
-            letter-spacing: 1.2px;
-            color: #ec6826;
-            text-align: center; }
-          .map_content .contacts .container .contacts_wrap .contacts_content .contacts_description {
-            color: #2c313f;
-            font-family: "Roboto";
-            font-size: 1.25rem;
-            font-weight: 300;
-            line-height: 1.8;
-            text-align: center;
-            margin-bottom: 1.75rem; }
-          .map_content .contacts .container .contacts_wrap .contacts_content .contacts_line {
+          height: 100%;
+          object-fit: cover; }
+      .contacts_workers .container .workers_content .workers_elem .workers_elem_contacts {
+        margin-top: 2.5rem;
+        position: relative;
+        width: 100%; }
+        .contacts_workers .container .workers_content .workers_elem .workers_elem_contacts p {
+          font-family: "Sansus Webissimo";
+          color: #ec6826;
+          font-size: 2.25rem;
+          font-weight: 400;
+          line-height: 0.8;
+          letter-spacing: 0.09rem;
+          margin-bottom: 1.75rem; }
+        .contacts_workers .container .workers_content .workers_elem .workers_elem_contacts .contacts_line {
+          width: 7.4375rem;
+          position: relative;
+          display: block;
+          height: 0.0625rem;
+          margin-bottom: 1.875rem;
+          background-color: #ec6826; }
+          .contacts_workers .container .workers_content .workers_elem .workers_elem_contacts .contacts_line::before {
+            content: "";
             display: block;
-            width: 100%;
-            height: 0.0625rem;
-            background-color: #ec6826; }
-          .map_content .contacts .container .contacts_wrap .contacts_content .contacts_info {
-            margin-top: 1.9375rem;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            padding: 0 3.4375rem; }
-            .map_content .contacts .container .contacts_wrap .contacts_content .contacts_info .contacts_email, .map_content .contacts .container .contacts_wrap .contacts_content .contacts_info .contacts_phone {
-              display: flex;
-              flex-direction: column; }
-              .map_content .contacts .container .contacts_wrap .contacts_content .contacts_info .contacts_email a, .map_content .contacts .container .contacts_wrap .contacts_content .contacts_info .contacts_phone a {
-                font-family: "Sansus Webissimo";
-                color: #2c313f;
-                font-size: 1.25rem;
-                font-weight: 400;
-                line-height: 1.5;
-                letter-spacing: 0.05rem; }
-                .map_content .contacts .container .contacts_wrap .contacts_content .contacts_info .contacts_email a span, .map_content .contacts .container .contacts_wrap .contacts_content .contacts_info .contacts_phone a span {
-                  color: #ec6826; }
-          .map_content .contacts .container .contacts_wrap .contacts_content .social {
-            margin-top: 2.625rem;
-            display: flex;
-            position: relative;
-            margin-left: 3.125rem; }
-            .map_content .contacts .container .contacts_wrap .contacts_content .social a {
-              color: #ec6826;
-              font-size: 1.5625rem;
-              transition: transform .4s; }
-              .map_content .contacts .container .contacts_wrap .contacts_content .social a:hover {
-                transform: scale(1.2); }
+            position: absolute;
+            width: 3.3125rem;
+            height: 0.4375rem;
+            background-color: #ec6826;
+            top: -0.25rem;
+            left: 0;
+            border-radius: 0.25rem; }
+        .contacts_workers .container .workers_content .workers_elem .workers_elem_contacts .workers_status, .contacts_workers .container .workers_content .workers_elem .workers_elem_contacts .workers_email {
+          font-family: "Sansus Webissimo";
+          font-size: 1.875rem;
+          font-weight: 400;
+          line-height: 1;
+          letter-spacing: 0.075rem; }
+        .contacts_workers .container .workers_content .workers_elem .workers_elem_contacts h4 {
+          color: #2c313f;
+          text-transform: uppercase; }
+        .contacts_workers .container .workers_content .workers_elem .workers_elem_contacts a {
+          color: #515560; }
 
 .main_footer {
   width: 100%;
@@ -1296,6 +1398,46 @@ abbr, acronym {
         align-items: center;
         padding: 4.0625rem;
         overflow: hidden; }
+        .hotel_booking .container .hotel_booking_wrap .hotel_booking_elem .booking_content:hover .line_block i {
+          opacity: 1; }
+          .hotel_booking .container .hotel_booking_wrap .hotel_booking_elem .booking_content:hover .line_block i:first-child {
+            width: 100%; }
+          .hotel_booking .container .hotel_booking_wrap .hotel_booking_elem .booking_content:hover .line_block i:nth-child(2) {
+            height: 100%; }
+          .hotel_booking .container .hotel_booking_wrap .hotel_booking_elem .booking_content:hover .line_block i:nth-child(3) {
+            height: 100%; }
+          .hotel_booking .container .hotel_booking_wrap .hotel_booking_elem .booking_content:hover .line_block i:last-child {
+            width: 100%; }
+        .hotel_booking .container .hotel_booking_wrap .hotel_booking_elem .booking_content .line_block {
+          position: absolute;
+          top: 3.125rem;
+          width: 84%;
+          height: 21.25rem;
+          background-color: transparent; }
+          .hotel_booking .container .hotel_booking_wrap .hotel_booking_elem .booking_content .line_block i {
+            display: block;
+            transition: .5s;
+            position: absolute;
+            opacity: 0;
+            background-color: #f0f0f0;
+            height: 0.0625rem; }
+            .hotel_booking .container .hotel_booking_wrap .hotel_booking_elem .booking_content .line_block i:first-child {
+              left: 0;
+              width: 0; }
+            .hotel_booking .container .hotel_booking_wrap .hotel_booking_elem .booking_content .line_block i:nth-child(2) {
+              left: 0;
+              top: 0;
+              width: 0.0625rem;
+              height: 0;
+              transition-delay: .3s; }
+            .hotel_booking .container .hotel_booking_wrap .hotel_booking_elem .booking_content .line_block i:nth-child(3) {
+              right: 0;
+              width: 0.0625rem;
+              height: 0;
+              transition-delay: .3s; }
+            .hotel_booking .container .hotel_booking_wrap .hotel_booking_elem .booking_content .line_block i:last-child {
+              bottom: 0;
+              width: 0; }
         .hotel_booking .container .hotel_booking_wrap .hotel_booking_elem .booking_content h2 {
           text-align: center;
           color: #ffffff;
@@ -1321,5 +1463,184 @@ abbr, acronym {
           border: 0.0625rem solid #ec6826; }
           .hotel_booking .container .hotel_booking_wrap .hotel_booking_elem .booking_content .btn:hover {
             background-color: #ec6826; }
+
+.visa_europe {
+  width: 100%;
+  position: relative;
+  overflow: hidden; }
+  .visa_europe .parallax {
+    position: absolute; }
+  .visa_europe .visa_europe_content {
+    padding: 7.5rem 0;
+    position: relative;
+    width: 100%;
+    display: flex; }
+    .visa_europe .visa_europe_content .content_img {
+      flex: 1 1 23.75rem;
+      width: 100%;
+      height: 18.125rem;
+      overflow: hidden;
+      position: relative; }
+      .visa_europe .visa_europe_content .content_img:last-child {
+        align-self: flex-end; }
+      .visa_europe .visa_europe_content .content_img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; }
+    .visa_europe .visa_europe_content .content_title {
+      max-width: 71.25rem;
+      width: 100%;
+      background-color: #fff;
+      padding: 5rem 5.625rem;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center; }
+      .visa_europe .visa_europe_content .content_title h2 {
+        max-width: 30.9375rem;
+        width: 100%;
+        position: relative;
+        font-family: "Sansus Webissimo";
+        color: #ec6826;
+        font-size: 2.5rem;
+        font-weight: 400;
+        line-height: 0.85;
+        letter-spacing: 0.1rem;
+        margin-bottom: 2.5rem; }
+        .visa_europe .visa_europe_content .content_title h2::before {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 5.9375rem;
+          height: 0.0625rem;
+          background-color: #ec6826;
+          top: 1.25rem;
+          left: -7.5rem;
+          z-index: 1;
+          background-color: #ec6826; }
+        .visa_europe .visa_europe_content .content_title h2::after {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 5.9375rem;
+          height: 0.0625rem;
+          background-color: #ec6826;
+          top: 1.25rem;
+          right: -7.5rem;
+          z-index: 1;
+          background-color: #ec6826; }
+      .visa_europe .visa_europe_content .content_title p {
+        max-width: 58.75rem;
+        width: 100%;
+        color: #071947;
+        font-family: "Roboto";
+        font-size: 1.25rem;
+        font-weight: 300;
+        line-height: 1.7;
+        letter-spacing: 0.05rem;
+        margin-bottom: 3.125rem; }
+        .visa_europe .visa_europe_content .content_title p:last-child {
+          margin-bottom: 0; }
+
+.visa_tabs {
+  width: 100%;
+  position: relative;
+  overflow: hidden; }
+  .visa_tabs .parallax {
+    position: absolute; }
+  .visa_tabs .container_visa .visa_tabs_wrap {
+    width: 100%;
+    position: relative;
+    z-index: 3;
+    padding: 7.1875rem 0; }
+    .visa_tabs .container_visa .visa_tabs_wrap .tabs_head {
+      position: relative;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap; }
+      .visa_tabs .container_visa .visa_tabs_wrap .tabs_head .tabs_btn {
+        cursor: pointer;
+        padding: 0 4.0625rem;
+        background-color: #fff;
+        height: 4.375rem;
+        color: #ec6826;
+        border: none;
+        font-family: "Sansus Webissimo";
+        font-size: 1.25rem;
+        font-weight: 400;
+        line-height: 1.5;
+        letter-spacing: 0.05rem;
+        transition: color .4s, background-color .4s; }
+        .visa_tabs .container_visa .visa_tabs_wrap .tabs_head .tabs_btn.active {
+          color: #ffffff;
+          background-color: #ec6826; }
+        .visa_tabs .container_visa .visa_tabs_wrap .tabs_head .tabs_btn:hover {
+          color: #ffffff;
+          background-color: #ec6826; }
+    .visa_tabs .container_visa .visa_tabs_wrap .tabs_wrap_elem {
+      position: relative;
+      width: 100%; }
+      .visa_tabs .container_visa .visa_tabs_wrap .tabs_wrap_elem .tabs_title {
+        width: 100%;
+        position: relative;
+        height: 6.875rem;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .visa_tabs .container_visa .visa_tabs_wrap .tabs_wrap_elem .tabs_title::before {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-color: #081b4c;
+          opacity: 0.47;
+          z-index: -1; }
+        .visa_tabs .container_visa .visa_tabs_wrap .tabs_wrap_elem .tabs_title h2 {
+          font-family: "Sansus Webissimo";
+          font-size: 2.1875rem;
+          font-weight: 400;
+          line-height: 0.85;
+          text-transform: uppercase;
+          letter-spacing: 0.0875rem;
+          color: #ffffff; }
+      .visa_tabs .container_visa .visa_tabs_wrap .tabs_wrap_elem .tabs_content {
+        width: 100%;
+        position: absolute;
+        padding: 3.125rem 5rem;
+        background-color: #fff;
+        opacity: 0; }
+        .visa_tabs .container_visa .visa_tabs_wrap .tabs_wrap_elem .tabs_content p {
+          color: #ec6826;
+          font-family: "Sansus Webissimo";
+          font-size: 1.875rem;
+          font-weight: 400;
+          line-height: 1;
+          letter-spacing: 0.075rem;
+          margin-bottom: 1.875rem; }
+        .visa_tabs .container_visa .visa_tabs_wrap .tabs_wrap_elem .tabs_content ul li {
+          position: relative;
+          color: #202532;
+          font-family: "Roboto";
+          font-size: 1.25rem;
+          font-weight: 300;
+          line-height: 1.5;
+          letter-spacing: 0.05rem;
+          margin-bottom: 0.9375rem;
+          display: block; }
+          .visa_tabs .container_visa .visa_tabs_wrap .tabs_wrap_elem .tabs_content ul li::before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 0.1875rem;
+            height: 0.1875rem;
+            background-color: #ec6826;
+            border-radius: 50%;
+            top: 0.9375rem;
+            left: -1.5625rem; }
+        .visa_tabs .container_visa .visa_tabs_wrap .tabs_wrap_elem .tabs_content.active {
+          position: relative;
+          opacity: 1; }
 
 /*# sourceMappingURL=main.css.map*/

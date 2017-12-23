@@ -1,0 +1,111 @@
+.visa_tabs {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  .parallax {
+    position: absolute;
+  }
+  .container_visa {
+    .visa_tabs_wrap {
+      width: 100%;
+      position: relative;
+      z-index: 3;
+      padding: rem(115px) 0;
+      .tabs_head {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        .tabs_btn {
+          cursor: pointer;
+          padding: 0 rem(65px);
+          background-color: #fff;
+          height: rem(70px);
+          color: $orange_color;
+          border: none;
+          font-family: $Sansus_Webissimo;
+          font-size: rem(20px);
+          font-weight: 400;
+          line-height: 1.5;
+          letter-spacing: rem(0.8px);
+          transition: color .4s, background-color .4s;
+          &.active {
+            color: #ffffff;
+            background-color: $orange_color;
+          }
+
+          &:hover {
+            color: #ffffff;
+            background-color: $orange_color;
+          }
+        }
+      }
+      .tabs_wrap_elem {
+        position: relative;
+        width: 100%;
+        .tabs_title {
+          width: 100%;
+          position: relative;
+          height: rem(110px);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          &::before {
+            @include before_fig(100%, 100%, #081b4c);
+            opacity: 0.47;
+            z-index: -1;
+
+          }
+          h2 {
+            font-family: $Sansus_Webissimo;
+            font-size: rem(35px);
+            font-weight: 400;
+            line-height: 0.85;
+            text-transform: uppercase;
+            letter-spacing: rem(1.4px);
+            color: #ffffff;
+          }
+        }
+        .tabs_content {
+          width: 100%;
+          position: absolute;
+          padding: rem(50px) rem(80px);
+          background-color: #fff;
+          opacity: 0;
+          p {
+            color: $orange_color;
+            font-family: $Sansus_Webissimo;
+            font-size: rem(30px);
+            font-weight: 400;
+            line-height: 1;
+            letter-spacing: rem(1.2px);
+            margin-bottom: rem(30px);
+          }
+          ul {
+            li {
+              position: relative;
+              color: #202532;
+              font-family: $Roboto;
+              font-size: rem(20px);
+              font-weight: 300;
+              line-height: 1.5;
+              letter-spacing: rem(0.8px);
+              margin-bottom: rem(15px);
+              display: block;
+              &::before {
+                @include before_fig(rem(3px), rem(3px), $orange_color);
+                border-radius: 50%;
+                top: rem(15px);
+                left: rem(-25px);
+              }
+            }
+          }
+          &.active {
+            position: relative;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}

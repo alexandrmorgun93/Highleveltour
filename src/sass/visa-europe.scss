@@ -1,0 +1,81 @@
+.visa_europe {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  .parallax {
+    position: absolute;
+  }
+  .visa_europe_content {
+    padding: rem(120px) 0;
+    position: relative;
+    width: 100%;
+    display: flex;
+    .content_img {
+      flex: 1 1 rem(380px);
+      width: 100%;
+      height: rem(290px);
+      overflow: hidden;
+      position: relative;
+      &:last-child {
+        align-self: flex-end;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .content_title {
+      max-width: rem(1140px);
+      width: 100%;
+      background-color: #fff;
+      padding: rem(80px) rem(90px);
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+
+      h2 {
+        max-width: rem(495px);
+        width: 100%;
+        position: relative;
+        font-family: $Sansus_Webissimo;
+        color: $orange_color;
+        font-size: rem(40px);
+        font-weight: 400;
+        line-height: 0.85;
+        letter-spacing: rem(1.6px);
+        margin-bottom: rem(40px);
+        &::before {
+          @include before_fig(rem(95px), rem(1px), $orange_color);
+          top: rem(20px);
+          left: rem(-120px);
+          z-index: 1;
+          background-color: $orange_color;
+        }
+        &::after {
+          @include before_fig(rem(95px), rem(1px), $orange_color);
+          top: rem(20px);
+          right: rem(-120px);
+          z-index: 1;
+          background-color: $orange_color;
+        }
+      }
+      p {
+        max-width: rem(940px);
+        width: 100%;
+        color: #071947;
+        font-family: $Roboto;
+        font-size: rem(20px);
+        font-weight: 300;
+        line-height: 1.7;
+        letter-spacing: rem(0.8px);
+        margin-bottom: rem(50px);
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
