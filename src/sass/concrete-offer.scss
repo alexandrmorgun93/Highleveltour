@@ -1,0 +1,158 @@
+.main_section {
+  .main_concrete {
+    width: 100%;
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    .concrete {
+      text-align: center;
+      .concrete_text {
+        margin-bottom: rem(100px);
+        p {
+          color: #ffffff;
+          font-family: $Roboto;
+          font-size: rem(20px);
+          font-weight: 300;
+          line-height: 1.5;
+          max-width: rem(1140px);
+          width: 100%;
+          margin-top: rem(30px);
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.concrete_content {
+  width: 100%;
+  position: relative;
+  padding: rem(150px) 0;
+  .container_concrete {
+    max-width: rem(960px);
+    width: 100%;
+    margin: 0 auto;
+    h2 {
+      color: $orange_color;
+      font-family: $Sansus_Webissimo;
+      font-size: rem(40px);
+      font-weight: 400;
+      line-height: 0.75;
+      text-transform: uppercase;
+      letter-spacing: rem(1.6px);
+      margin-bottom: rem(80px);
+    }
+    p {
+      text-indent: rem(20px);
+      color: #2c313f;
+      font-family: $Roboto;
+      font-size: rem(20px);
+      font-weight: 300;
+      line-height: 1.7;
+      margin-bottom: rem(50px);
+      span {
+        font-family: $Sansus_Webissimo;
+        font-weight: 400;
+        letter-spacing: rem(0.8px);
+        text-transform: uppercase;
+      }
+    }
+    h4 {
+      color: $orange_color;
+      font-family: "Sansus Webissimo";
+      font-weight: 400;
+      font-size: rem(20px);
+      letter-spacing: rem(0.8px);
+      text-transform: uppercase;
+      margin-bottom: rem(50px);
+    }
+    h5 {
+      text-indent: rem(20px);
+      font-family: $Sansus_Webissimo;
+      font-weight: 400;
+      color: #2c313f;
+      font-size: rem(20px);
+      letter-spacing: rem(0.8px);
+      text-transform: uppercase;
+      margin-bottom: rem(50px);
+    }
+
+    .concrete_services_hotel {
+      margin: 0 0 rem(50px) rem(20px);
+      .services_hotel_item {
+        color: #2c313f;
+        position: relative;
+        font-family: $Sansus_Webissimo;
+        font-weight: 400;
+        letter-spacing: rem(0.8px);
+        text-transform: uppercase;
+        font-size: rem(20px);
+        margin-bottom: rem(10px);
+        &:last-child {
+          margin-bottom: 0;
+        }
+        &::before {
+          @include before_fig(rem(4px), rem(4px), $orange_color);
+          top: rem(10px);
+          left: rem(-20px);
+          border-radius: 50%;
+        }
+      }
+    }
+    .concrete_services {
+      margin: 0 0 rem(50px) rem(20px);
+      .concrete_services_item {
+        position: relative;
+        color: #2c313f;
+        font-family: $Roboto;
+        font-size: rem(20px);
+        font-weight: 300;
+        line-height: 1.7;
+        &::before {
+          @include before_fig(rem(4px), rem(4px), $orange_color);
+          top: rem(15px);
+          left: rem(-20px);
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+  .concrete_img {
+    width: 100%;
+    position: relative;
+    display: flex;
+    padding: 0 rem(30px);
+    margin-bottom: rem(50px);
+    .concrete_img_elem {
+      flex: 1 1 20%;
+      height: rem(280px);
+      overflow: hidden;
+      margin-right: rem(30px);
+      &:last-child {
+        margin-right: 0;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  .img_line {
+    width: 100%;
+    position: relative;
+    height: rem(270px);
+    margin-bottom: rem(50px);
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

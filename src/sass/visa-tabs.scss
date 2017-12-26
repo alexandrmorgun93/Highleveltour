@@ -18,7 +18,7 @@
         flex-wrap: wrap;
         .tabs_btn {
           cursor: pointer;
-          padding: 0 rem(65px);
+          padding: 0 rem(32px);
           background-color: #fff;
           height: rem(70px);
           color: $orange_color;
@@ -28,6 +28,7 @@
           font-weight: 400;
           line-height: 1.5;
           letter-spacing: rem(0.8px);
+          text-transform: uppercase;
           transition: color .4s, background-color .4s;
           &.active {
             color: #ffffff;
