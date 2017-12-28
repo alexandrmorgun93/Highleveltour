@@ -1,0 +1,52 @@
+.air_tickets {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  .parallax {
+    position: absolute;
+  }
+  .tickets_wrap {
+    position: relative;
+    padding: rem(115px) 0 rem(95px);
+    width: 100%;
+    .tickets_content {
+      position: relative;
+      padding: rem(80px) rem(90px) rem(50px);
+      max-width: rem(1140px);
+      width: 100%;
+      margin: 0 auto;
+      background-color: #fff;
+      text-align: center;
+      h2 {
+        position: relative;
+        display: inline-block;
+        color: $orange_color;
+        font-family: $Sansus_Webissimo;
+        font-size: rem(40px);
+        font-weight: 400;
+        line-height: 0.85;
+        letter-spacing: 1.6px;
+        margin-bottom: rem(50px);
+        &::before {
+          @include before_fig(rem(90px), rem(1px), $orange_color);
+          left: -60%;
+          top: rem(20px);
+        }
+        &::after {
+          @include before_fig(rem(90px), rem(1px), $orange_color);
+          right: -60%;
+          top: rem(20px);
+        }
+      }
+      p {
+        color: #071947;
+        font-family: $Roboto;
+        font-size: rem(20px);
+        font-weight: 300;
+        line-height: 1.7;
+        margin-bottom: rem(50px);
+      }
+
+    }
+  }
+}

@@ -59,7 +59,8 @@ abbr, acronym {
 .container {
   max-width: 95rem;
   width: 100%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 0 0.9375rem; }
 
 .container_visa {
   max-width: 71.25rem;
@@ -273,7 +274,8 @@ abbr, acronym {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    flex-wrap: wrap; }
     .main_head .container .main_head_wrap .menu_btn {
       display: flex;
       align-items: center; }
@@ -319,6 +321,13 @@ abbr, acronym {
         .main_head .container .main_head_wrap .menu_btn .menu_btn_content.active:last-child {
           -webkit-transform: rotate(412deg) translate(-11px, 2px);
           transform: rotate(412deg) translate(-11px, 2px); }
+    .main_head .container .main_head_wrap .logo {
+      max-width: 18.75rem;
+      width: 100%; }
+      .main_head .container .main_head_wrap .logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; }
     .main_head .container .main_head_wrap .phone {
       position: relative; }
       .main_head .container .main_head_wrap .phone a {
@@ -368,7 +377,8 @@ abbr, acronym {
         z-index: 0;
         top: 0;
         left: 0;
-        width: 100%; }
+        width: 100%;
+        height: 100%; }
         .main_slide .main_slide_wrap .main_slide_elem .main_img img {
           position: relative;
           width: 100%;
@@ -443,46 +453,44 @@ abbr, acronym {
   padding: 4.375rem 0 4.75rem; }
   .form_section .container {
     display: flex;
-    justify-content: center; }
+    flex-direction: column;
+    align-items: center; }
+    .form_section .container h2 {
+      text-align: center;
+      color: #ec6826;
+      font-family: "Sansus Webissimo";
+      font-size: 2.5rem;
+      font-weight: 400;
+      line-height: 1.4;
+      letter-spacing: 0.1rem;
+      margin-bottom: 1.875rem; }
+    .form_section .container p {
+      text-align: center;
+      font-family: "Roboto";
+      font-size: 1.25rem;
+      font-weight: 300;
+      letter-spacing: 0.05rem;
+      margin-bottom: 2.5rem; }
     .form_section .container form {
       max-width: 46.875rem;
       width: 100%;
       position: relative;
       display: flex;
-      flex-direction: column;
-      text-align: center; }
-      .form_section .container form h2 {
-        color: #ec6826;
-        font-family: "Sansus Webissimo";
-        font-size: 2.5rem;
-        font-weight: 400;
-        line-height: 0.75;
-        letter-spacing: 0.1rem;
-        margin-bottom: 1.875rem; }
-      .form_section .container form p {
+      justify-content: space-between; }
+      .form_section .container form .btn {
+        max-width: 22.5rem;
+        border: 0.0625rem solid #ec6826; }
+      .form_section .container form input {
+        max-width: 22.5rem;
+        width: 100%;
+        border: none;
+        border-bottom: 0.0625rem solid #071947;
+        color: #9c9c9c;
         font-family: "Roboto";
         font-size: 1.25rem;
         font-weight: 300;
-        line-height: 1.5;
-        letter-spacing: 0.05rem;
-        margin-bottom: 2.5rem; }
-      .form_section .container form .form_inp {
-        display: flex;
-        justify-content: space-between; }
-        .form_section .container form .form_inp .btn {
-          max-width: 22.5rem;
-          border: 0.0625rem solid #ec6826; }
-        .form_section .container form .form_inp input {
-          max-width: 22.5rem;
-          width: 100%;
-          border: none;
-          border-bottom: 0.0625rem solid #071947;
-          color: #9c9c9c;
-          font-family: "Roboto";
-          font-size: 1.25rem;
-          font-weight: 300;
-          line-height: 0.66;
-          letter-spacing: 0.05rem; }
+        line-height: 0.66;
+        letter-spacing: 0.05rem; }
 
 .feedback_section {
   position: relative;
@@ -769,17 +777,20 @@ abbr, acronym {
     width: 100%;
     position: relative;
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    flex-wrap: wrap; }
     .main_footer .container .footer_wrap .left_footer {
       display: flex;
       flex-direction: column; }
       .main_footer .container .footer_wrap .left_footer ul {
         display: flex;
+        flex-wrap: wrap;
         margin-bottom: 3.125rem; }
         .main_footer .container .footer_wrap .left_footer ul li {
           position: relative;
           margin-left: 3.125rem; }
           .main_footer .container .footer_wrap .left_footer ul li a {
+            position: relative;
             color: #ffffff;
             font-family: "Roboto";
             font-size: 1rem;
@@ -787,7 +798,8 @@ abbr, acronym {
             line-height: 1.8;
             letter-spacing: 0.04rem;
             text-transform: uppercase;
-            transition: color .4s; }
+            transition: color .4s;
+            display: inline-block; }
             .main_footer .container .footer_wrap .left_footer ul li a:before {
               content: "";
               display: block;
@@ -810,11 +822,12 @@ abbr, acronym {
         line-height: 1.87;
         letter-spacing: 0.04rem; }
     .main_footer .container .footer_wrap .right_footer {
-      display: flex;
-      flex-direction: column; }
+      display: flex; }
       .main_footer .container .footer_wrap .right_footer .arrow {
         cursor: pointer;
-        position: relative;
+        position: absolute;
+        top: 0;
+        right: 0;
         width: 3.125rem;
         height: 3.125rem;
         display: flex;
@@ -828,12 +841,13 @@ abbr, acronym {
         .main_footer .container .footer_wrap .right_footer .arrow i {
           bottom: 0.625rem;
           position: absolute;
-          font-size: 1.875rem;
+          font-size: 2.1875rem;
           align-items: center;
           color: #ec6826; }
           .main_footer .container .footer_wrap .right_footer .arrow i:last-child {
-            top: 0.875rem; }
+            top: 0.3125rem; }
       .main_footer .container .footer_wrap .right_footer .logo {
+        align-self: flex-end;
         max-width: 17.875rem;
         width: 100%;
         height: 2.9375rem; }
@@ -1974,6 +1988,130 @@ abbr, acronym {
     font-weight: 300;
     line-height: 1.5; }
 
+.visa_america {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  height: 100vh; }
+  .visa_america .parallax {
+    position: absolute; }
+  .visa_america .visa_america_wrap {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    display: flex;
+    height: 100%;
+    align-items: center; }
+    .visa_america .visa_america_wrap .america_content {
+      position: relative;
+      width: 100%;
+      background-color: #1a2b55; }
+      .visa_america .visa_america_wrap .america_content .container_visa h2 {
+        color: #ffffff;
+        font-family: "Sansus Webissimo";
+        font-size: 2.5625rem;
+        font-weight: 400;
+        line-height: 1.39;
+        text-transform: uppercase;
+        max-width: 40.625rem;
+        width: 100%;
+        padding: 5rem 0;
+        letter-spacing: 0.1375rem; }
+        .visa_america .visa_america_wrap .america_content .container_visa h2 span {
+          color: #ec6826;
+          font-size: 3.4375rem; }
+      .visa_america .visa_america_wrap .america_content .container_visa .america_form {
+        position: absolute;
+        top: -4.375rem;
+        right: 0;
+        z-index: 4;
+        max-width: 29.375rem;
+        width: 100%;
+        padding: 6.25rem 3.4375rem;
+        background-color: #fff; }
+        .visa_america .visa_america_wrap .america_content .container_visa .america_form h3 {
+          text-align: center;
+          color: #ec6826;
+          font-family: "Sansus Webissimo";
+          font-size: 1.625rem;
+          font-weight: 400;
+          line-height: 1.15;
+          text-transform: uppercase;
+          letter-spacing: 0.065rem;
+          margin-bottom: 2.5rem; }
+        .visa_america .visa_america_wrap .america_content .container_visa .america_form .america_feedback {
+          position: revert;
+          display: flex;
+          flex-direction: column;
+          justify-content: center; }
+          .visa_america .visa_america_wrap .america_content .container_visa .america_form .america_feedback input {
+            max-width: 21rem;
+            width: 100%;
+            border: none;
+            border-bottom: 0.0625rem solid #8c8c8c;
+            height: 3.125rem;
+            color: #8c8c8c;
+            font-family: "Roboto";
+            font-size: 1.25rem;
+            font-weight: 300;
+            line-height: 1.5;
+            letter-spacing: 0.05rem;
+            margin-bottom: 1.25rem; }
+          .visa_america .visa_america_wrap .america_content .container_visa .america_form .america_feedback .btn {
+            margin-top: 1.875rem;
+            border: 0.0625rem solid #ec6826; }
+
+.america_visa_price {
+  position: relative;
+  width: 100%;
+  background-color: #fff;
+  padding: 5.625rem 0; }
+  .america_visa_price .container_visa .america_price_content {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center; }
+    .america_visa_price .container_visa .america_price_content .price_block {
+      max-width: 28.75rem;
+      width: 100%;
+      position: relative;
+      background-color: #63a9da;
+      padding: 5rem 3.125rem 3.125rem;
+      display: flex;
+      flex-direction: column;
+      text-align: center; }
+      .america_visa_price .container_visa .america_price_content .price_block h4 {
+        align-self: center;
+        max-width: 18.125rem;
+        width: 100%;
+        color: #ffffff;
+        font-family: "Sansus Webissimo";
+        font-size: 2.5rem;
+        font-weight: 400;
+        line-height: 1.2;
+        letter-spacing: 1.6px;
+        margin-bottom: 0.9375rem; }
+      .america_visa_price .container_visa .america_price_content .price_block p {
+        color: #ffffff;
+        font-family: "Roboto";
+        font-size: 1.375rem;
+        font-weight: 300;
+        line-height: 1.6;
+        letter-spacing: 0.055rem;
+        align-self: center; }
+    .america_visa_price .container_visa .america_price_content .price_list {
+      position: relative; }
+      .america_visa_price .container_visa .america_price_content .price_list ul li {
+        color: #202532;
+        font-family: "Roboto";
+        font-size: 1.375rem;
+        font-weight: 300;
+        line-height: 1.6;
+        letter-spacing: 0.88px;
+        margin: 0 0 0.625rem 3.75rem; }
+        .america_visa_price .container_visa .america_price_content .price_list ul li:last-child {
+          margin-bottom: 0; }
+
 .main_section .main_concrete {
   width: 100%;
   position: relative;
@@ -2114,5 +2252,92 @@ abbr, acronym {
       width: 100%;
       height: 100%;
       object-fit: cover; }
+
+.air_tickets {
+  position: relative;
+  width: 100%;
+  overflow: hidden; }
+  .air_tickets .parallax {
+    position: absolute; }
+  .air_tickets .tickets_wrap {
+    position: relative;
+    padding: 7.1875rem 0 5.9375rem;
+    width: 100%; }
+    .air_tickets .tickets_wrap .tickets_content {
+      position: relative;
+      padding: 5rem 5.625rem 3.125rem;
+      max-width: 71.25rem;
+      width: 100%;
+      margin: 0 auto;
+      background-color: #fff;
+      text-align: center; }
+      .air_tickets .tickets_wrap .tickets_content h2 {
+        position: relative;
+        display: inline-block;
+        color: #ec6826;
+        font-family: "Sansus Webissimo";
+        font-size: 2.5rem;
+        font-weight: 400;
+        line-height: 0.85;
+        letter-spacing: 1.6px;
+        margin-bottom: 3.125rem; }
+        .air_tickets .tickets_wrap .tickets_content h2::before {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 5.625rem;
+          height: 0.0625rem;
+          background-color: #ec6826;
+          left: -60%;
+          top: 1.25rem; }
+        .air_tickets .tickets_wrap .tickets_content h2::after {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 5.625rem;
+          height: 0.0625rem;
+          background-color: #ec6826;
+          right: -60%;
+          top: 1.25rem; }
+      .air_tickets .tickets_wrap .tickets_content p {
+        color: #071947;
+        font-family: "Roboto";
+        font-size: 1.25rem;
+        font-weight: 300;
+        line-height: 1.7;
+        margin-bottom: 3.125rem; }
+
+@media screen and (max-width: 1450px) {
+  .main_footer .container .footer_wrap .left_footer {
+    margin-bottom: 0.9375rem; }
+    .main_footer .container .footer_wrap .left_footer ul {
+      margin-bottom: 0.9375rem; } }
+
+@media screen and (max-width: 760px) {
+  .main_head .container .main_head_wrap .menu_btn p {
+    display: none; }
+  .main_head .container .main_head_wrap .phone {
+    display: none; }
+  .form_section .container h2 {
+    font-size: 1.875rem; }
+  .form_section .container p {
+    font-size: 1rem; }
+  .form_section .container form {
+    flex-direction: column;
+    align-items: center; }
+    .form_section .container form input {
+      text-align: center;
+      margin-bottom: 0.9375rem; } }
+
+@media screen and (max-width: 700px) {
+  .main_footer .container .footer_wrap .left_footer ul {
+    flex-direction: column; }
+    .main_footer .container .footer_wrap .left_footer ul li {
+      margin-left: 0;
+      margin-bottom: 0.625rem; } }
+
+@media screen and (max-width: 500px) {
+  .main_head .container .main_head_wrap .logo {
+    max-width: 12.5rem; } }
 
 /*# sourceMappingURL=main.css.map*/

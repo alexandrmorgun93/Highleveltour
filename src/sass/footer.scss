@@ -9,16 +9,19 @@
       position: relative;
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
       .left_footer {
         display: flex;
         flex-direction: column;
         ul {
           display: flex;
+          flex-wrap: wrap;
           margin-bottom: rem(50px);
           li {
             position: relative;
             margin-left: rem(50px);
             a {
+              position: relative;
               color: #ffffff;
               font-family: $Roboto;
               font-size: rem(16px);
@@ -27,6 +30,7 @@
               letter-spacing: rem(0.64px);
               text-transform: uppercase;
               transition: color .4s;
+              display: inline-block;
               &:before {
                 @include before_fig(0, rem(1px), $orange_color);
                 bottom: rem(-4px);
@@ -53,10 +57,11 @@
       }
       .right_footer {
         display: flex;
-        flex-direction: column;
         .arrow {
           cursor: pointer;
-          position: relative;
+          position: absolute;
+          top: 0;
+          right: 0;
           width: rem(50px);
           height: rem(50px);
           display: flex;
@@ -70,15 +75,16 @@
           i {
             bottom: rem(10px);
             position: absolute;
-            font-size: rem(30px);
+            font-size: rem(35px);
             align-items: center;
             color: $orange_color;
             &:last-child {
-              top: rem(14px);
+              top: rem(5px);
             }
           }
         }
         .logo {
+          align-self: flex-end;
           max-width: rem(286px);
           width: 100%;
           height: rem(47px);

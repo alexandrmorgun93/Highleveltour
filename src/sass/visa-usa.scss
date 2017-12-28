@@ -141,3 +141,155 @@
     line-height: 1.5;
   }
 }
+
+//VISA AMERICA
+.visa_america {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  .parallax {
+    position: absolute;
+  }
+  .visa_america_wrap {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    .america_content {
+      position: relative;
+      width: 100%;
+      background-color: #1a2b55;
+      .container_visa {
+        h2 {
+          color: #ffffff;
+          font-family: $Sansus_Webissimo;
+          font-size: rem(41px);
+          font-weight: 400;
+          line-height: 1.39;
+          text-transform: uppercase;
+          max-width: rem(650px);
+          width: 100%;
+          padding: rem(80px) 0;
+          letter-spacing: rem(2.2px);
+          span {
+            color: $orange_color;
+            font-size: rem(55px);
+
+          }
+        }
+        .america_form {
+          position: absolute;
+          top: rem(-70px);
+          right: 0;
+          z-index: 4;
+          max-width: rem(470px);
+          width: 100%;
+          padding: rem(100px) rem(55px);
+          background-color: #fff;
+          h3 {
+            text-align: center;
+            color: $orange_color;
+            font-family: "Sansus Webissimo";
+            font-size: rem(26px);
+            font-weight: 400;
+            line-height: 1.15;
+            text-transform: uppercase;
+            letter-spacing: rem(1.04px);
+            margin-bottom: rem(40px);
+          }
+          .america_feedback {
+            position: revert;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            input {
+              max-width: rem(336px);
+              width: 100%;
+              border: none;
+              border-bottom: rem(1px) solid #8c8c8c;
+              height: rem(50px);
+              color: #8c8c8c;
+              font-family: $Roboto;
+              font-size: rem(20px);
+              font-weight: 300;
+              line-height: 1.5;
+              letter-spacing: rem(0.8px);
+              margin-bottom: rem(20px);
+            }
+            .btn {
+              margin-top: rem(30px);
+              border: rem(1px) solid $orange_color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//AMERICA VISA PRICE
+.america_visa_price {
+  position: relative;
+  width: 100%;
+  background-color: #fff;
+  padding: rem(90px) 0;
+  .container_visa {
+    .america_price_content {
+      width: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      .price_block {
+        max-width: rem(460px);
+        width: 100%;
+        position: relative;
+        background-color: #63a9da;
+        padding: rem(80px) rem(50px) rem(50px);
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        h4 {
+          align-self: center;
+          max-width: rem(290px);
+          width: 100%;
+          color: #ffffff;
+          font-family: $Sansus_Webissimo;
+          font-size: rem(40px);
+          font-weight: 400;
+          line-height: 1.2;
+          letter-spacing: 1.6px;
+          margin-bottom: rem(15px);
+        }
+        p {
+          color: #ffffff;
+          font-family: $Roboto;
+          font-size: rem(22px);
+          font-weight: 300;
+          line-height: 1.6;
+          letter-spacing: rem(0.88px);
+          align-self: center;
+        }
+      }
+      .price_list {
+        position: relative;
+        ul {
+          li {
+            color: #202532;
+            font-family: $Roboto;
+            font-size: rem(22px);
+            font-weight: 300;
+            line-height: 1.6;
+            letter-spacing: 0.88px;
+            margin: 0 0 rem(10px) rem(60px);
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -4,54 +4,50 @@
   padding: rem(70px) 0 rem(76px);
   .container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    h2 {
+      text-align: center;
+      color: $orange_color;
+      font-family: $Sansus_Webissimo;
+      font-size: rem(40px);
+      font-weight: 400;
+      line-height: 1.4;
+      letter-spacing: rem(1.6px);
+      margin-bottom: rem(30px);
+    }
+    p {
+      text-align: center;
+      font-family: $Roboto;
+      font-size: rem(20px);
+      font-weight: 300;
+      //line-height: 1.5;
+      letter-spacing: rem(0.8px);
+      margin-bottom: rem(40px);
+    }
     form {
       max-width: rem(750px);
       width: 100%;
       position: relative;
       display: flex;
-      flex-direction: column;
-      text-align: center;
-      h2 {
-        color: $orange_color;
-        font-family: $Sansus_Webissimo;
-        font-size: rem(40px);
-        font-weight: 400;
-        line-height: 0.75;
-        letter-spacing: rem(1.6px);
-        margin-bottom: rem(30px);
+      justify-content: space-between;
+      .btn {
+        max-width: rem(360px);
+        border: rem(1px) solid $orange_color;
       }
-      p {
+      input {
+        max-width: rem(360px);
+        width: 100%;
+        border: none;
+        border-bottom: rem(1px) solid #071947;
+        color: #9c9c9c;
         font-family: $Roboto;
         font-size: rem(20px);
         font-weight: 300;
-        line-height: 1.5;
+        line-height: 0.66;
         letter-spacing: rem(0.8px);
-        margin-bottom: rem(40px);
       }
-      .form_inp {
-        display: flex;
-        justify-content: space-between;
-        .btn {
-          max-width: rem(360px);
-          border: rem(1px) solid $orange_color;
-        }
-        input {
-          max-width: rem(360px);
-          width: 100%;
-          border: none;
-          border-bottom: rem(1px) solid #071947;
-          color: #9c9c9c;
-          font-family: $Roboto;
-          font-size: rem(20px);
-          font-weight: 300;
-          line-height: 0.66;
-          letter-spacing: rem(0.8px);
-        }
-      }
-
     }
-
   }
 }
 
@@ -120,10 +116,10 @@
       background-color: transparent;
       border: rem(1px) solid $orange_color;
       margin: 0 auto;
-        &:hover{
-          background-color: $orange_color;
+      &:hover {
+        background-color: $orange_color;
 
-        }
+      }
     }
   }
 }
