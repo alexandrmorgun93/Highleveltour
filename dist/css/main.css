@@ -104,7 +104,8 @@ abbr, acronym {
   font-family: "Sansus Webissimo";
   font-size: 4rem;
   font-weight: 400;
-  letter-spacing: 0.16rem; }
+  letter-spacing: 0.16rem;
+  margin-bottom: 1.875rem; }
 
 .line {
   position: relative;
@@ -155,6 +156,7 @@ abbr, acronym {
       margin-top: 1.9375rem;
       width: 100%;
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       padding: 0 3.4375rem; }
       .contacts_wrap .contacts_content .contacts_info .contacts_email, .contacts_wrap .contacts_content .contacts_info .contacts_phone {
@@ -341,6 +343,20 @@ abbr, acronym {
           color: #ec6826;
           transition: color .4s; }
 
+.menu {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: 100;
+  background-color: #081b4c;
+  opacity: 0.92; }
+  .menu .container .menu_wrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center; }
+
 .main_slide {
   width: 100%;
   height: 100vh;
@@ -366,7 +382,7 @@ abbr, acronym {
     .main_slide .main_slide_wrap .main_slide_elem {
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
+      justify-content: center;
       align-items: center;
       text-align: center;
       position: relative;
@@ -386,7 +402,6 @@ abbr, acronym {
           object-fit: cover; }
       .main_slide .main_slide_wrap .main_slide_elem .main_slide_text {
         position: relative;
-        margin-bottom: 11%;
         z-index: 3; }
         .main_slide .main_slide_wrap .main_slide_elem .main_slide_text .main_title {
           color: #fefeff;
@@ -510,7 +525,7 @@ abbr, acronym {
   .feedback_section .feedback_content {
     padding: 8.125rem 0 5.625rem;
     position: relative;
-    z-index: 3;
+    z-index: 2;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -606,7 +621,7 @@ abbr, acronym {
         bottom: -63%;
         transition: bottom .4s; }
         .top_section .container .top_section_wrap .top_content .content .content_elem {
-          padding: 3.75rem 3.125rem 0 4.375rem;
+          padding: 3.75rem 3.125rem 1.875rem 4.375rem;
           width: 100%;
           background-color: #fff;
           position: relative;
@@ -629,34 +644,32 @@ abbr, acronym {
             transition-delay: .1s;
             opacity: 0;
             margin-bottom: 0.9375rem; }
-          .top_section .container .top_section_wrap .top_content .content .content_elem ul {
-            margin-bottom: 3.75rem; }
-            .top_section .container .top_section_wrap .top_content .content .content_elem ul li {
-              color: #2c313f;
-              position: relative;
-              font-family: "Roboto";
-              font-size: 1.25rem;
-              font-weight: 300;
-              line-height: 2;
-              letter-spacing: 0.05rem; }
-              .top_section .container .top_section_wrap .top_content .content .content_elem ul li::before {
-                content: "";
-                display: block;
-                position: absolute;
-                width: 0.1875rem;
-                height: 0.1875rem;
-                background-color: #ec6826;
-                left: -10px;
-                top: 20px;
-                z-index: 1; }
+          .top_section .container .top_section_wrap .top_content .content .content_elem ul li {
+            color: #2c313f;
+            position: relative;
+            font-family: "Roboto";
+            font-size: 1.25rem;
+            font-weight: 300;
+            line-height: 2;
+            letter-spacing: 0.05rem; }
+            .top_section .container .top_section_wrap .top_content .content .content_elem ul li::before {
+              content: "";
+              display: block;
+              position: absolute;
+              width: 0.1875rem;
+              height: 0.1875rem;
+              background-color: #ec6826;
+              left: -10px;
+              top: 20px;
+              z-index: 1; }
           .top_section .container .top_section_wrap .top_content .content .content_elem .btn {
+            margin-top: 3.75rem;
             position: relative;
             left: -50%;
             max-width: 4.75rem;
             border: 1px solid #ec6826;
             font-size: 1.125rem;
             align-self: flex-end;
-            margin-bottom: 1.875rem;
             opacity: 0;
             transition: left .4s linear;
             transition-delay: .3s; }
@@ -917,14 +930,12 @@ abbr, acronym {
       .main_section .main_content-wrap .main_content p {
         color: #ffffff;
         font-family: "Roboto";
-        font-size: 1.375rem;
+        font-size: 1.5625rem;
         font-weight: 300;
         line-height: 1.63;
         letter-spacing: 0.055rem;
         max-width: 54.0625rem;
         width: 100%; }
-      .main_section .main_content-wrap .main_content .title {
-        margin: 6.25rem 0 6.25rem; }
       .main_section .main_content-wrap .main_content .arrow_down {
         position: absolute;
         bottom: 4.375rem;
@@ -938,9 +949,9 @@ abbr, acronym {
           display: block;
           position: absolute;
           width: 0.0625rem;
-          height: 4.375rem;
+          height: 3.125rem;
           background-color: #fff;
-          top: -4.6875rem; }
+          top: -3.125rem; }
         .main_section .main_content-wrap .main_content .arrow_down a {
           width: 2.5625rem;
           height: 41px;
@@ -967,7 +978,10 @@ abbr, acronym {
       .france_top .container .france_info_wrap .france_info_content .info_text {
         position: relative;
         background-color: #fff;
-        padding: 3.9375rem; }
+        padding: 2.5rem;
+        width: 100%;
+        max-width: 36.625rem;
+        overflow: hidden; }
         .france_top .container .france_info_wrap .france_info_content .info_text p {
           max-width: 28.4375rem;
           width: 100%; }
@@ -981,9 +995,10 @@ abbr, acronym {
         .france_top .container .france_info_wrap .france_info_content .info_img_wrap .info_img {
           position: relative;
           overflow: hidden;
-          max-width: 23.125rem;
-          height: 19.375rem;
-          width: 100%; }
+          max-width: 50%;
+          width: 50%;
+          flex: 1 1 40%;
+          height: 19.375rem; }
           .france_top .container .france_info_wrap .france_info_content .info_img_wrap .info_img img {
             width: 100%;
             height: 100%;
@@ -994,7 +1009,7 @@ abbr, acronym {
 .reverse {
   flex-direction: row-reverse; }
   .reverse .text_revers {
-    height: 24.375rem;
+    max-height: 24.375rem;
     top: 1.875rem; }
   .reverse .img_reverse {
     flex-direction: row-reverse; }
@@ -1086,9 +1101,9 @@ abbr, acronym {
       display: flex;
       justify-content: center;
       align-items: center;
-      z-index: 3; }
+      z-index: 101; }
       .europe_section .container .region_content .select_region .btn {
-        z-index: 4;
+        z-index: 102;
         max-width: 22.3125rem;
         border: 1px solid #ec6826;
         background-color: transparent; }
@@ -1101,6 +1116,7 @@ abbr, acronym {
       width: 100%;
       left: 0;
       top: 0;
+      z-index: 100;
       background-color: #fff;
       padding: 8.4375rem 4.6875rem 5rem;
       visibility: hidden;
@@ -1125,12 +1141,16 @@ abbr, acronym {
         .europe_section .container .region_content .region_content_wrap .region_content_elem .region_list {
           width: 100%;
           display: flex;
-          justify-content: space-between; }
+          flex-wrap: wrap; }
           .europe_section .container .region_content .region_content_wrap .region_content_elem .region_list ul {
             display: flex;
-            flex-direction: column; }
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 100%; }
             .europe_section .container .region_content .region_content_wrap .region_content_elem .region_list ul li {
-              margin-bottom: 2.1875rem; }
+              margin-bottom: 2.1875rem;
+              max-width: 24%;
+              flex: 1 1 24%; }
               .europe_section .container .region_content .region_content_wrap .region_content_elem .region_list ul li:hover a {
                 color: #ec6826; }
               .europe_section .container .region_content .region_content_wrap .region_content_elem .region_list ul li:last-child {
@@ -1295,7 +1315,6 @@ abbr, acronym {
       display: flex; }
       .visa_support .container .visa_support_content .visa_support_elem .visa_support_img {
         position: relative;
-        max-width: 52.6875rem;
         width: 100%; }
         .visa_support .container .visa_support_content .visa_support_elem .visa_support_img img {
           width: 100%;
@@ -1322,7 +1341,6 @@ abbr, acronym {
           letter-spacing: 0.0875rem;
           margin-bottom: 3.4375rem; }
         .visa_support .container .visa_support_content .visa_support_elem .visa_support_text p {
-          max-width: 25.5625rem;
           width: 100%;
           color: #2c313f;
           font-family: "Roboto";
@@ -1424,6 +1442,7 @@ abbr, acronym {
             width: 100%; }
         .hotel_booking .container .hotel_booking_wrap .hotel_booking_elem .booking_content .line_block {
           position: absolute;
+          z-index: -1;
           top: 3.125rem;
           width: 84%;
           height: 21.25rem;
@@ -1458,7 +1477,6 @@ abbr, acronym {
           font-family: "Sansus Webissimo";
           font-size: 2.1875rem;
           font-weight: 400;
-          line-height: 0.85;
           text-transform: uppercase;
           letter-spacing: 0.0875rem;
           margin-bottom: 1.875rem; }
@@ -1501,8 +1519,7 @@ abbr, acronym {
         width: 100%;
         height: 100%;
         object-fit: cover; }
-    .visa_europe .visa_europe_content .content_title {
-      max-width: 71.25rem;
+    .visa_europe .visa_europe_content .container_visa .content_title {
       width: 100%;
       background-color: #fff;
       padding: 5rem 5.625rem;
@@ -1511,7 +1528,7 @@ abbr, acronym {
       justify-content: center;
       flex-direction: column;
       align-items: center; }
-      .visa_europe .visa_europe_content .content_title h2 {
+      .visa_europe .visa_europe_content .container_visa .content_title h2 {
         max-width: 30.9375rem;
         width: 100%;
         position: relative;
@@ -1522,7 +1539,7 @@ abbr, acronym {
         line-height: 0.85;
         letter-spacing: 0.1rem;
         margin-bottom: 2.5rem; }
-        .visa_europe .visa_europe_content .content_title h2::before {
+        .visa_europe .visa_europe_content .container_visa .content_title h2::before {
           content: "";
           display: block;
           position: absolute;
@@ -1533,7 +1550,7 @@ abbr, acronym {
           left: -7.5rem;
           z-index: 1;
           background-color: #ec6826; }
-        .visa_europe .visa_europe_content .content_title h2::after {
+        .visa_europe .visa_europe_content .container_visa .content_title h2::after {
           content: "";
           display: block;
           position: absolute;
@@ -1544,7 +1561,7 @@ abbr, acronym {
           right: -7.5rem;
           z-index: 1;
           background-color: #ec6826; }
-      .visa_europe .visa_europe_content .content_title p {
+      .visa_europe .visa_europe_content .container_visa .content_title p {
         max-width: 58.75rem;
         width: 100%;
         color: #071947;
@@ -1554,7 +1571,7 @@ abbr, acronym {
         line-height: 1.7;
         letter-spacing: 0.05rem;
         margin-bottom: 3.125rem; }
-        .visa_europe .visa_europe_content .content_title p:last-child {
+        .visa_europe .visa_europe_content .container_visa .content_title p:last-child {
           margin-bottom: 0; }
 
 .visa_tabs {
@@ -1572,7 +1589,8 @@ abbr, acronym {
       position: relative;
       width: 100%;
       display: flex;
-      flex-wrap: wrap; }
+      flex-wrap: wrap;
+      background-color: #fff; }
       .visa_tabs .container_visa .visa_tabs_wrap .tabs_head .tabs_btn {
         cursor: pointer;
         padding: 0 2rem;
@@ -1613,6 +1631,7 @@ abbr, acronym {
           opacity: 0.47;
           z-index: -1; }
         .visa_tabs .container_visa .visa_tabs_wrap .tabs_wrap_elem .tabs_title h2 {
+          text-align: center;
           font-family: "Sansus Webissimo";
           font-size: 2.1875rem;
           font-weight: 400;
@@ -1667,7 +1686,6 @@ abbr, acronym {
     width: 100%;
     position: relative;
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap; }
     .special_sentence .container .sentence_content .sentence_elem {
       position: relative;
@@ -1676,12 +1694,14 @@ abbr, acronym {
       flex: 1 1 30%;
       overflow: hidden;
       max-height: 33.125rem;
-      margin-bottom: 1.875rem; }
+      margin-bottom: 1.875rem;
+      margin-right: 1.25rem; }
       .special_sentence .container .sentence_content .sentence_elem:nth-child(2), .special_sentence .container .sentence_content .sentence_elem:nth-child(3) {
         max-width: 62.5rem;
-        flex: 1 1 70%;
+        flex: 1 1 100%;
         width: 100%;
-        display: flex; }
+        display: flex;
+        max-height: none; }
         .special_sentence .container .sentence_content .sentence_elem:nth-child(2) .sentence_img, .special_sentence .container .sentence_content .sentence_elem:nth-child(3) .sentence_img {
           height: 100%; }
         .special_sentence .container .sentence_content .sentence_elem:nth-child(2) .sentence_text p, .special_sentence .container .sentence_content .sentence_elem:nth-child(3) .sentence_text p {
@@ -1698,7 +1718,8 @@ abbr, acronym {
           width: 100%; }
       .special_sentence .container .sentence_content .sentence_elem .sentence_img {
         width: 100%;
-        height: 15.875rem; }
+        height: 15.875rem;
+        overflow: hidden; }
         .special_sentence .container .sentence_content .sentence_elem .sentence_img img {
           width: 100%;
           height: 100%;
@@ -1817,19 +1838,19 @@ abbr, acronym {
         flex-wrap: wrap;
         width: 100%;
         padding: 0 1.875rem; }
-        .hotel_page .hotel_content .hotel_img .img_content .hotel_img {
+        .hotel_page .hotel_content .hotel_img .img_content .img_elem {
           flex: 1 1 25%;
           margin: 0 0.9375rem 1.875rem;
           transition: filter .4s;
           overflow: hidden;
           height: 13.75rem; }
-          .hotel_page .hotel_content .hotel_img .img_content .hotel_img img {
+          .hotel_page .hotel_content .hotel_img .img_content .img_elem img {
             width: 100%;
             height: 100%;
             object-fit: cover; }
-          .hotel_page .hotel_content .hotel_img .img_content .hotel_img:hover {
+          .hotel_page .hotel_content .hotel_img .img_content .img_elem:hover {
             filter: grayscale(80%); }
-          .hotel_page .hotel_content .hotel_img .img_content .hotel_img:first-child {
+          .hotel_page .hotel_content .hotel_img .img_content .img_elem:first-child {
             flex: 1 1 100%;
             height: 31.25rem; }
       .hotel_page .hotel_content .hotel_img .btn {
@@ -2123,24 +2144,22 @@ abbr, acronym {
   height: 100%; }
   .main_section .main_concrete .concrete {
     text-align: center; }
-    .main_section .main_concrete .concrete .concrete_text {
-      margin-bottom: 6.25rem; }
-      .main_section .main_concrete .concrete .concrete_text p {
-        color: #ffffff;
-        font-family: "Roboto";
-        font-size: 1.25rem;
-        font-weight: 300;
-        line-height: 1.5;
-        max-width: 71.25rem;
-        width: 100%;
-        margin-top: 1.875rem; }
-        .main_section .main_concrete .concrete .concrete_text p:last-child {
-          margin-bottom: 0; }
+    .main_section .main_concrete .concrete p {
+      color: #ffffff;
+      font-family: "Roboto";
+      font-size: 1.25rem;
+      font-weight: 300;
+      line-height: 1.5;
+      max-width: 71.25rem;
+      width: 100%;
+      margin-top: 1.875rem; }
+      .main_section .main_concrete .concrete p:last-child {
+        margin-bottom: 1.875rem; }
 
 .concrete_content {
   width: 100%;
   position: relative;
-  padding: 9.375rem 0; }
+  padding: 9.375rem 0.9375rem; }
   .concrete_content .container_concrete {
     max-width: 60rem;
     width: 100%;
@@ -2307,17 +2326,196 @@ abbr, acronym {
         line-height: 1.7;
         margin-bottom: 3.125rem; }
 
+@media screen and (max-width: 1520px) {
+  .special_sentence .container .sentence_content {
+    justify-content: center; }
+    .special_sentence .container .sentence_content .sentence_elem:first-child {
+      order: 1; } }
+
 @media screen and (max-width: 1450px) {
   .main_footer .container .footer_wrap .left_footer {
     margin-bottom: 0.9375rem; }
     .main_footer .container .footer_wrap .left_footer ul {
       margin-bottom: 0.9375rem; } }
 
+@media screen and (max-width: 1280px) {
+  .visa_europe .visa_europe_content {
+    padding: 7.5rem 3.75rem; }
+    .visa_europe .visa_europe_content .content_img {
+      display: none; }
+  .special_sentence .container .sentence_content .sentence_elem {
+    flex: 1 1 50%; }
+  .hotel_page .hotel_content .hotel_img .img_content .img_elem {
+    flex: 1 1 40%; }
+  .concrete_content .concrete_img {
+    flex-wrap: wrap;
+    justify-content: center; }
+    .concrete_content .concrete_img .concrete_img_elem {
+      max-width: 30%;
+      width: 30%;
+      flex: 1 1 30%;
+      margin: 0 0.625rem 0.625rem 0; }
+      .concrete_content .concrete_img .concrete_img_elem:nth-child(3n+3) {
+        margin-right: 0; } }
+
+@media screen and (max-width: 1140px) {
+  .visa_tabs .container_visa .visa_tabs_wrap .tabs_head {
+    padding: 0 0.9375rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .visa_tabs .container_visa .visa_tabs_wrap .tabs_head .tabs_btn {
+      max-width: 34.375rem;
+      width: 100%;
+      border: 0.0625rem solid #ec6826; }
+  .europe_section .container .region_content .select_region .region_content_wrap {
+    padding: 8.4375rem 0 5rem; }
+  .price_services {
+    padding: 3.125rem 0; }
+    .price_services .services_title::before, .price_services .services_title::after {
+      width: 0;
+      height: 0; } }
+
+@media screen and (max-width: 1030px) {
+  .visa_support .container .visa_support_content .visa_support_elem {
+    min-height: auto;
+    overflow: hidden;
+    margin-bottom: 1.25rem; }
+    .visa_support .container .visa_support_content .visa_support_elem .visa_support_img {
+      position: absolute;
+      width: 100%;
+      height: 100%; }
+    .visa_support .container .visa_support_content .visa_support_elem .visa_support_text {
+      border: 0.0625rem solid #ec6826;
+      padding: 1.875rem 1.875rem;
+      max-width: none;
+      background-color: rgba(255, 255, 255, 0.6); }
+  .visa_support_bottom .bottom_elem p {
+    font-size: 1.875rem; }
+  .france_day_content .container p {
+    width: 100%; }
+  .france_day_content .container .france_day_img {
+    flex-wrap: wrap; }
+    .france_day_content .container .france_day_img .day_img_elem {
+      max-width: none;
+      flex: 1 1 40%; }
+  .main_section .main_concrete .concrete .main_title {
+    font-size: 2.8125rem; }
+  .map_content .contacts {
+    position: relative;
+    bottom: auto; }
+    .map_content .contacts .container {
+      justify-content: center; }
+  .hotel_booking .container .hotel_booking_wrap .hotel_booking_elem {
+    margin-bottom: 0.9375rem; }
+    .hotel_booking .container .hotel_booking_wrap .hotel_booking_elem .booking_content {
+      padding: 1.875rem;
+      width: 100%; }
+      .hotel_booking .container .hotel_booking_wrap .hotel_booking_elem .booking_content h2 {
+        font-size: 1.5625rem; }
+  .hotel_page .hotel_content .hotel_img {
+    float: none;
+    width: 100%;
+    margin-bottom: 3.125rem;
+    margin-left: 0; }
+    .hotel_page .hotel_content .hotel_img .img_content .img_elem {
+      flex: 1 1 30%; }
+  .france_top .container .france_info_wrap .france_info_content {
+    justify-content: center;
+    flex-direction: column; }
+    .france_top .container .france_info_wrap .france_info_content .info_text {
+      max-width: none; }
+      .france_top .container .france_info_wrap .france_info_content .info_text p {
+        max-width: none; }
+    .france_top .container .france_info_wrap .france_info_content .info_img_wrap {
+      max-width: none; }
+      .france_top .container .france_info_wrap .france_info_content .info_img_wrap .info_img {
+        flex: 1 1 30%; }
+  .europe_section .container .slide_europe .slide_europe_content {
+    height: auto;
+    flex-direction: column; }
+    .europe_section .container .slide_europe .slide_europe_content .slide_europe_img {
+      max-width: none;
+      height: 21.875rem; }
+    .europe_section .container .slide_europe .slide_europe_content .slide_europe_text {
+      max-width: none;
+      padding: 1.25rem; }
+  .europe_section .container .slide_europe .slide_control {
+    top: 15.625rem; } }
+
+@media screen and (max-width: 920px) {
+  .feedback_section .feedback_content h3 {
+    font-size: 1.875rem;
+    text-align: center; }
+  .feedback_section .feedback_content .feedback {
+    padding: 0 0.9375rem; }
+    .feedback_section .feedback_content .feedback input {
+      max-width: none;
+      width: 100%;
+      text-align: center; }
+    .feedback_section .feedback_content .feedback textarea {
+      text-align: center; }
+  .visa_europe .visa_europe_content .container_visa .content_title {
+    padding: 1.875rem; }
+    .visa_europe .visa_europe_content .container_visa .content_title h2 {
+      font-size: 1.875rem; }
+      .visa_europe .visa_europe_content .container_visa .content_title h2::before, .visa_europe .visa_europe_content .container_visa .content_title h2::after {
+        width: 0;
+        height: 0; }
+    .visa_europe .visa_europe_content .container_visa .content_title p {
+      margin-bottom: 1.875rem; } }
+
+@media screen and (max-width: 800px) {
+  .europe_section .container .region_content .select_region .region_content_wrap .region_content_elem .region_list ul li {
+    max-width: 50%;
+    flex: 1 1 50%; }
+  .main_section .main_content-wrap .main_content .main_title {
+    font-size: 2.8125rem; }
+  .main_section .main_content-wrap .main_content .main_title_item {
+    font-size: 2.5rem; }
+    .main_section .main_content-wrap .main_content .main_title_item::before, .main_section .main_content-wrap .main_content .main_title_item::after {
+      width: 1.875rem;
+      left: 20%; }
+    .main_section .main_content-wrap .main_content .main_title_item::after {
+      left: auto;
+      right: 20%; }
+    .main_section .main_content-wrap .main_content .main_title_item p {
+      font-size: 1.25rem; }
+    .main_section .main_content-wrap .main_content .main_title_item .arrow_down {
+      bottom: 3.125rem; }
+  .concrete_content .concrete_img {
+    padding: 0; }
+    .concrete_content .concrete_img .concrete_img_elem {
+      max-width: 45%;
+      width: 45%;
+      flex: 1 1 100%; }
+      .concrete_content .concrete_img .concrete_img_elem:nth-child(3n+3) {
+        margin-right: 0.625rem; } }
+
 @media screen and (max-width: 760px) {
   .main_head .container .main_head_wrap .menu_btn p {
     display: none; }
   .main_head .container .main_head_wrap .phone {
     display: none; }
+  .visa_tabs .container_visa .visa_tabs_wrap .tabs_wrap_elem .tabs_title h2 {
+    font-size: 1.75rem; }
+  .visa_tabs .container_visa .visa_tabs_wrap .tabs_wrap_elem .tabs_content {
+    padding: 1.875rem 0.625rem 1.25rem 1.25rem; }
+    .visa_tabs .container_visa .visa_tabs_wrap .tabs_wrap_elem .tabs_content p {
+      font-size: 1.5625rem; }
+    .visa_tabs .container_visa .visa_tabs_wrap .tabs_wrap_elem .tabs_content ul li::before {
+      left: -0.625rem; }
+  .special_sentence .container .sentence_content .sentence_elem {
+    margin-right: 0;
+    flex: 1 1 100%; }
+    .special_sentence .container .sentence_content .sentence_elem .sentence_text h2 {
+      font-size: 1.75rem; }
+    .special_sentence .container .sentence_content .sentence_elem .sentence_text h3 {
+      font-size: 1.5625rem; }
+    .special_sentence .container .sentence_content .sentence_elem:nth-child(2), .special_sentence .container .sentence_content .sentence_elem:nth-child(3) {
+      flex-direction: column; }
+      .special_sentence .container .sentence_content .sentence_elem:nth-child(2) .sentence_img, .special_sentence .container .sentence_content .sentence_elem:nth-child(3) .sentence_img {
+        max-height: 15.875rem; }
   .form_section .container h2 {
     font-size: 1.875rem; }
   .form_section .container p {
@@ -2334,10 +2532,105 @@ abbr, acronym {
     flex-direction: column; }
     .main_footer .container .footer_wrap .left_footer ul li {
       margin-left: 0;
-      margin-bottom: 0.625rem; } }
+      margin-bottom: 0.625rem; }
+  .main_slide .main_slide_wrap .main_slide_elem .main_slide_text .main_title {
+    font-size: 2.8125rem; }
+  .main_slide .main_slide_wrap .main_slide_elem .main_slide_text .title_item {
+    font-size: 1.5625rem; }
+  .france_top .container .france_info_wrap .france_info_content .info_text {
+    padding: 0.9375rem; }
+    .france_top .container .france_info_wrap .france_info_content .info_text p {
+      font-size: 1.125rem; }
+  .france_top .container .france_info_wrap .france_info_content .info_img_wrap .info_img {
+    flex: 1 1 100%;
+    max-width: 100%;
+    height: 12.5rem; }
+    .france_top .container .france_info_wrap .france_info_content .info_img_wrap .info_img:nth-child(2) {
+      top: auto; }
+  .main_section .main_concrete .concrete .main_title {
+    font-size: 1.875rem; }
+  .main_section .main_concrete .concrete p {
+    font-size: 0.9375rem; }
+  .contacts_wrap .contacts_content .contacts_info {
+    justify-content: center;
+    text-align: center; }
+  .contacts_wrap .contacts_content .social {
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 0; }
+    .contacts_wrap .contacts_content .social .btn {
+      margin-top: 0.9375rem; }
+  .visa_europe .visa_europe_content {
+    padding: 7.5rem 0.625rem; }
+    .visa_europe .visa_europe_content .container_visa .content_title {
+      padding: 1.875rem; }
+      .visa_europe .visa_europe_content .container_visa .content_title h2 {
+        font-size: 1.875rem; }
+  .price_services .services_title {
+    font-size: 1.5625rem;
+    margin-bottom: 1.25rem;
+    line-height: 1; }
+  .price_services p {
+    font-size: 1.125rem; } }
+
+@media screen and (max-width: 560px) {
+  .visa_support .container .visa_support_content .visa_support_elem .visa_support_text h2 {
+    font-size: 1.25rem; }
+  .visa_support_bottom .bottom_elem p {
+    font-size: 1.25rem; }
+  .hotel_page .hotel_content .hotel_img .img_content {
+    padding: 0; }
+    .hotel_page .hotel_content .hotel_img .img_content .img_elem {
+      margin: 0 0.3125rem 1.25rem;
+      flex: 1 1 40%; }
+  .hotel_page .hotel_content .hotel_text {
+    padding: 0 0.9375rem; } }
 
 @media screen and (max-width: 500px) {
   .main_head .container .main_head_wrap .logo {
-    max-width: 12.5rem; } }
+    max-width: 12.5rem; }
+  .main_slide .main_slide_wrap .main_slide_elem .main_slide_text .main_title {
+    font-size: 1.875rem;
+    line-height: 1; }
+  .main_slide .main_slide_wrap .main_slide_elem .main_slide_text .title_item {
+    font-size: 1.25rem; }
+  .france_day_content .container .france_day_img .day_img_elem {
+    max-width: none;
+    flex: 1 1 100%;
+    margin-bottom: 0.3125rem; }
+  .contacts_wrap {
+    padding: 0.9375rem;
+    align-self: flex-end; }
+    .contacts_wrap .contacts_content .contacts_info {
+      padding: 0 0.9375rem; }
+    .contacts_wrap .contacts_content .social {
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 0; }
+      .contacts_wrap .contacts_content .social .btn {
+        margin-top: 0.9375rem;
+        margin-left: 0; }
+  .contacts_workers .container .workers_content .workers_elem {
+    padding: 0;
+    margin-bottom: 1.875rem; }
+  .europe_section .container .region_content .select_region .region_content_wrap .region_content_elem h3 {
+    font-size: 1.125rem; }
+  .europe_section .container .region_content .select_region .region_content_wrap .region_content_elem .region_list ul li {
+    max-width: 100%;
+    flex: 1 1 100%; }
+  .europe_section .container .slide_europe .slide_europe_content .slide_europe_text h2 {
+    font-size: 1.875rem; }
+  .hotel_booking .container .hotel_booking_wrap .hotel_booking_elem .booking_content h2 {
+    font-size: 1.25rem; }
+  .hotel_booking .container .hotel_booking_wrap .hotel_booking_elem .booking_content p {
+    line-height: 1.5;
+    font-size: 1rem; }
+  .concrete_content .concrete_img .concrete_img_elem {
+    max-width: none;
+    width: 100%;
+    flex: 1 1 100%;
+    margin-right: auto; }
+    .concrete_content .concrete_img .concrete_img_elem:nth-child(3n+3) {
+      margin-right: auto; } }
 
 /*# sourceMappingURL=main.css.map*/

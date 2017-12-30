@@ -1,3 +1,18 @@
+@media screen and (max-width: 1520px) {
+  .special_sentence {
+    .container {
+      .sentence_content {
+        justify-content: center;
+        .sentence_elem {
+          &:first-child {
+            order: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 1450px) {
   //FOOTER
   .main_footer {
@@ -8,6 +23,363 @@
           ul {
             margin-bottom: rem(15px);
           }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  //VISA EUROPE
+  .visa_europe {
+    .visa_europe_content {
+      padding: rem(120px) rem(60px);
+      .content_img {
+        display: none;
+      }
+    }
+  }
+  //SPECIAL SENTENCE
+  .special_sentence {
+    .container {
+      .sentence_content {
+        .sentence_elem {
+          flex: 1 1 50%;
+        }
+      }
+    }
+  }
+  //HOTEL PAGE
+  .hotel_page {
+    .hotel_content {
+      .hotel_img {
+        .img_content {
+          .img_elem {
+            flex: 1 1 40%;
+          }
+        }
+      }
+    }
+  }
+  //CONCRETE CONTENT
+  .concrete_content {
+    .concrete_img {
+      flex-wrap: wrap;
+      justify-content: center;
+      .concrete_img_elem {
+        max-width: 30%;
+        width: 30%;
+        flex: 1 1 30%;
+        margin: 0 rem(10px) rem(10px) 0;
+        &:nth-child(3n+3) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  //VISA TABS
+  .visa_tabs {
+    .container_visa {
+      .visa_tabs_wrap {
+        .tabs_head {
+          padding: 0 rem(15px);
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          .tabs_btn {
+            max-width: rem(550px);
+            width: 100%;
+            border: rem(1px) solid $orange_color;
+          }
+        }
+      }
+    }
+  }
+  //EUROPE SECTION
+  .europe_section {
+    .container {
+      .region_content {
+        .select_region {
+          .region_content_wrap {
+            padding: rem(135px) 0 rem(80px);
+            .region_content_elem {
+              .region_list {
+
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  //PRICE SERVICES
+  .price_services {
+    padding: rem(50px) 0;
+    .services_title {
+      &::before, &::after {
+        width: 0;
+        height: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1030px) {
+  //VISA SUPPORT
+  .visa_support {
+    .container {
+      .visa_support_content {
+        .visa_support_elem {
+          min-height: auto;
+          overflow: hidden;
+          margin-bottom: rem(20px);
+          .visa_support_img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+          }
+          .visa_support_text {
+            border: rem(1px) solid $orange_color;
+            padding: rem(30px) rem(30px);
+            max-width: none;
+            background-color: rgba(255, 255, 255, 0.6);
+          }
+        }
+      }
+    }
+  }
+  .visa_support_bottom {
+    .bottom_elem {
+      p {
+        font-size: rem(30px);
+      }
+    }
+  }
+  //FRANCE DAY
+  .france_day_content {
+    .container {
+      p {
+        width: 100%;
+      }
+      .france_day_img {
+        flex-wrap: wrap;
+        .day_img_elem {
+          max-width: none;
+          flex: 1 1 40%;
+        }
+      }
+    }
+  }
+  //CONCRETE_OFFER
+  .main_section {
+    .main_concrete {
+      .concrete {
+        .main_title {
+          font-size: rem(45px);
+        }
+      }
+    }
+  }
+  //MAP CONTACT
+  .map_content {
+    .contacts {
+      position: relative;
+      bottom: auto;
+      .container {
+        justify-content: center;
+      }
+    }
+  }
+
+  //INDIVIDUAL TOURS
+  .hotel_booking {
+    .container {
+      .hotel_booking_wrap {
+        .hotel_booking_elem {
+          margin-bottom: rem(15px);
+          .booking_content {
+            padding: rem(30px);
+            width: 100%;
+            h2 {
+              font-size: rem(25px);
+            }
+          }
+        }
+      }
+    }
+  }
+  //HOTEL PAGE
+  .hotel_page {
+    .hotel_content {
+      .hotel_img {
+        float: none;
+        width: 100%;
+        margin-bottom: rem(50px);
+        margin-left: 0;
+        .img_content {
+          .img_elem {
+            flex: 1 1 30%;
+          }
+        }
+      }
+    }
+  }
+  //FRANCE TOP
+  .france_top {
+    .container {
+      .france_info_wrap {
+        .france_info_content {
+          justify-content: center;
+          flex-direction: column;
+          .info_text {
+            max-width: none;
+            p {
+              max-width: none;
+            }
+          }
+          .info_img_wrap {
+            max-width: none;
+            .info_img {
+
+              flex: 1 1 30%;
+            }
+          }
+        }
+      }
+    }
+  }
+  //EUROPE SECTION
+  .europe_section {
+    .container {
+      .slide_europe {
+        .slide_europe_content {
+          height: auto;
+          flex-direction: column;
+
+          .slide_europe_img {
+            max-width: none;
+            height: rem(350px);
+          }
+          .slide_europe_text {
+            max-width: none;
+            padding: rem(20px);
+          }
+        }
+        .slide_control {
+          top: rem(250px);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 920px) {
+  //FEEDBACK
+  .feedback_section {
+    .feedback_content {
+      h3 {
+        font-size: rem(30px);
+        text-align: center;
+      }
+      .feedback {
+        padding: 0 rem(15px);
+        input {
+          max-width: none;
+          width: 100%;
+          text-align: center;
+        }
+        textarea {
+          text-align: center;
+        }
+      }
+    }
+  }
+  //VISA EUROPE
+  .visa_europe {
+    .visa_europe_content {
+      .container_visa {
+        .content_title {
+          padding: rem(30px);
+          h2 {
+            font-size: rem(30px);
+            &::before,
+            &::after {
+              width: 0;
+              height: 0;
+            }
+          }
+          p {
+            margin-bottom: rem(30px);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  //EUROPE SECTION
+  .europe_section {
+    .container {
+      .region_content {
+        .select_region {
+          .region_content_wrap {
+            .region_content_elem {
+              .region_list {
+                ul {
+                  li {
+                    max-width: 50%;
+                    flex: 1 1 50%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  //MAIN SECTION
+  .main_section {
+    .main_content-wrap {
+      .main_content {
+        .main_title {
+          font-size: rem(45px);
+        }
+        .main_title_item {
+          font-size: rem(40px);
+          &::before, &::after {
+            width: rem(30px);
+            left: 20%;
+          }
+          &::after {
+            left: auto;
+            right: 20%;
+          }
+
+          p {
+            font-size: rem(20px);
+          }
+          .arrow_down {
+            bottom: rem(50px);
+          }
+        }
+      }
+    }
+  }
+  //CONCRETE CONTENT
+  .concrete_content {
+    .concrete_img {
+      padding: 0;
+      .concrete_img_elem {
+        max-width: 45%;
+        width: 45%;
+        flex: 1 1 100%;
+        &:nth-child(3n+3) {
+          margin-right: rem(10px);
         }
       }
     }
@@ -30,6 +402,59 @@
       }
     }
   }
+  //TABS
+  .visa_tabs {
+    .container_visa {
+      .visa_tabs_wrap {
+        .tabs_wrap_elem {
+          .tabs_title {
+            h2 {
+              font-size: rem(28px);
+            }
+          }
+          .tabs_content {
+            padding: rem(30px) rem(10px) rem(20px) rem(20px);
+            p {
+              font-size: rem(25px);
+            }
+            ul {
+              li {
+                &::before {
+                  left: rem(-10px);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  //SPECIAl SENTENCE
+  .special_sentence {
+    .container {
+      .sentence_content {
+        .sentence_elem {
+          margin-right: 0;
+          flex: 1 1 100%;
+          .sentence_text {
+            h2 {
+              font-size: rem(28px);
+            }
+            h3 {
+              font-size: rem(25px);
+            }
+          }
+          &:nth-child(2), &:nth-child(3) {
+            flex-direction: column;
+            .sentence_img {
+              max-height: rem(254px);
+            }
+          }
+        }
+      }
+    }
+  }
+
   //MAIN FORM
   .form_section {
     .container {
@@ -49,6 +474,7 @@
       }
     }
   }
+
 }
 
 @media screen and (max-width: 700px) {
@@ -68,16 +494,276 @@
       }
     }
   }
+  //MAIN SLIDE
+  .main_slide{
+    .main_slide_wrap{
+      .main_slide_elem{
+        .main_slide_text{
+          .main_title{
+            font-size: rem(45px);
+          }
+          .title_item{
+            font-size: rem(25px);
+          }
+        }
+      }
+    }
+  }
+  //FRANCE TOP
+  .france_top {
+    .container {
+      .france_info_wrap {
+        .france_info_content {
+          .info_text {
+            padding: rem(15px);
+            p {
+              font-size: rem(18px);
+            }
+          }
+          .info_img_wrap {
+            .info_img {
+              flex: 1 1 100%;
+              max-width: 100%;
+              height: rem(200px);
+              &:nth-child(2) {
+                top: auto;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  //CONCRETE_OFFER
+  .main_section {
+    .main_concrete {
+      .concrete {
+        .main_title {
+          font-size: rem(30px);
+        }
+        p{
+          font-size: rem(15px);
+        }
+      }
+    }
+  }
+  //CONTACTS
+  .contacts_wrap {
+    .contacts_content {
+      .contacts_info {
+        justify-content: center;
+        text-align: center;
+      }
+      .social {
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 0;
+        .btn {
+          margin-top: rem(15px);
+        }
+      }
+    }
+  }
+  //VISA EUROPE
+  .visa_europe {
+    .visa_europe_content {
+      padding: rem(120px) rem(10px);
+      .container_visa {
+        .content_title {
+          padding: rem(30px);
+          h2 {
+            font-size: rem(30px);
+          }
+        }
+      }
+    }
+  }
+  //PRICE SERVICES
+  .price_services {
+    .services_title {
+      font-size: rem(25px);
+      margin-bottom: rem(20px);
+      line-height: 1;
+    }
+    p {
+      font-size: rem(18px);
+    }
+  }
+
+}
+
+@media screen and (max-width: 560px) {
+  //VISA SUPPORT
+  .visa_support {
+    .container {
+      .visa_support_content {
+        .visa_support_elem {
+          .visa_support_text {
+            h2 {
+              font-size: rem(20px);
+            }
+          }
+        }
+      }
+    }
+  }
+  .visa_support_bottom {
+    .bottom_elem {
+      p {
+        font-size: rem(20px);
+      }
+    }
+  }
+  //HOTEL PAGE
+  .hotel_page {
+    .hotel_content {
+      .hotel_img {
+        .img_content {
+          padding: 0;
+          .img_elem {
+            margin: 0 rem(5px) rem(20px);
+            flex: 1 1 40%;
+          }
+        }
+      }
+      .hotel_text {
+        padding: 0 rem(15px);
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 500px) {
-  //HEADER
   //HEADER
   .main_head {
     .container {
       .main_head_wrap {
         .logo {
           max-width: rem(200px);
+        }
+      }
+    }
+  }
+  //MAIN SLIDE
+  .main_slide{
+    .main_slide_wrap{
+      .main_slide_elem{
+        .main_slide_text{
+          .main_title{
+            font-size: rem(30px);
+            line-height: 1;
+          }
+          .title_item{
+            font-size: rem(20px);
+          }
+        }
+      }
+    }
+  }
+  //FRANCE DAY
+  .france_day_content {
+    .container {
+      .france_day_img {
+        .day_img_elem {
+          max-width: none;
+          flex: 1 1 100%;
+          margin-bottom: rem(5px);
+        }
+      }
+    }
+  }
+  //CONTACTS
+  .contacts_wrap {
+    padding: rem(15px);
+    align-self: flex-end;
+    .contacts_content {
+      .contacts_info {
+        padding: 0 rem(15px);
+      }
+      .social {
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 0;
+        .btn {
+          margin-top: rem(15px);
+          margin-left: 0;
+        }
+      }
+    }
+  }
+  //CONTACTS CONTENT WORKERS
+  .contacts_workers {
+    .container {
+      .workers_content {
+        .workers_elem {
+          padding: 0;
+          margin-bottom: rem(30px);
+        }
+
+      }
+    }
+  }
+  //EUROPE SECTION
+  .europe_section {
+    .container {
+      .region_content {
+        .select_region {
+          .region_content_wrap {
+            .region_content_elem {
+              h3 {
+                font-size: rem(18px);
+              }
+              .region_list {
+                ul {
+                  li {
+                    max-width: 100%;
+                    flex: 1 1 100%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .slide_europe {
+        .slide_europe_content {
+          .slide_europe_text {
+            h2 {
+              font-size: rem(30px);
+            }
+          }
+        }
+      }
+    }
+  }
+  //INDIVIDUAL TOURS
+  .hotel_booking {
+    .container {
+      .hotel_booking_wrap {
+        .hotel_booking_elem {
+          .booking_content {
+            h2 {
+              font-size: rem(20px);
+            }
+            p {
+              line-height: 1.5;
+              font-size: rem(16px);
+            }
+          }
+        }
+      }
+    }
+  }
+  //CONCRETE CONTENT
+  .concrete_content {
+    .concrete_img {
+      .concrete_img_elem {
+        max-width: none;
+        width: 100%;
+        flex: 1 1 100%;
+        margin-right: auto;
+        &:nth-child(3n+3) {
+          margin-right: auto;
         }
       }
     }

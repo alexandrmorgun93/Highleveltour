@@ -19,7 +19,7 @@
     .main_slide_elem {
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
+      justify-content: center;
       align-items: center;
       text-align: center;
       position: relative;
@@ -41,7 +41,6 @@
       }
       .main_slide_text {
         position: relative;
-        margin-bottom: 11%;
         z-index: 3;
         .main_title {
           color: #fefeff;

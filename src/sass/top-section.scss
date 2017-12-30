@@ -56,7 +56,7 @@
           bottom: -63%;
           transition: bottom .4s;
           .content_elem {
-            padding: rem(60px) rem(50px) 0 rem(70px);
+            padding: rem(60px) rem(50px) rem(30px) rem(70px);
             width: 100%;
             background-color: #fff;
             position: relative;
@@ -83,7 +83,7 @@
               margin-bottom: rem(15px);
             }
             ul {
-              margin-bottom: rem(60px);
+              //margin-bottom: rem(60px);
               li {
                 color: $black_color;
                 position: relative;
@@ -101,13 +101,14 @@
               }
             }
             .btn {
-              position: relative;
+              margin-top: rem(60px);
+              position:relative;
               left: -50%;
               max-width: rem(76px);
               border: 1px solid $orange_color;
               font-size: rem(18px);
               align-self: flex-end;
-              margin-bottom: rem(30px);
+              //margin-bottom: rem(30px);
               opacity: 0;
               transition: left .4s linear;
               transition-delay: .3s;

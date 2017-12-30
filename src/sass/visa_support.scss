@@ -19,7 +19,6 @@
         display: flex;
         .visa_support_img {
           position: relative;
-          max-width: rem(843px);
           width: 100%;
           img {
             width: 100%;
@@ -50,7 +49,6 @@
             margin-bottom: rem(55px);
           }
           p {
-            max-width: rem(409px);
             width: 100%;
             color: #2c313f;
             font-family: $Roboto;
@@ -85,8 +83,8 @@
   position: relative;
   width: 100%;
   overflow: hidden;
-  &::before{
-    @include before_fig(100%,100%, #ffffff);
+  &::before {
+    @include before_fig(100%, 100%, #ffffff);
     opacity: 0.85;
     z-index: 1;
   }

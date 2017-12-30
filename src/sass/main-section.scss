@@ -50,16 +50,12 @@
       p {
         color: #ffffff;
         font-family: $Roboto;
-        font-size: rem(22px);
+        font-size: rem(25px);
         font-weight: 300;
         line-height: 1.63;
         letter-spacing: rem(0.88px);
         max-width: rem(865px);
         width: 100%;
-      }
-
-      .title {
-        margin: rem(100px) 0 rem(100px);
       }
 
       .arrow_down {
@@ -71,8 +67,8 @@
         font-size: rem(20px);
         color: $orange_color;
         &::before {
-          @include before_fig(rem(1px), rem(70px), #fff);
-          top: rem(-75px);
+          @include before_fig(rem(1px), rem(50px), #fff);
+          top: rem(-50px);
         }
         a {
           width: rem(41px);

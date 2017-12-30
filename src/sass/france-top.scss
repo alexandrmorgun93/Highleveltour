@@ -18,7 +18,10 @@
         .info_text {
           position: relative;
           background-color: #fff;
-          padding: rem(63px);
+          padding: rem(40px);
+          width: 100%;
+          max-width: rem(586px);
+          overflow: hidden;
           p {
             max-width: rem(455px);
             width: 100%;
@@ -34,9 +37,10 @@
           .info_img {
             position: relative;
             overflow: hidden;
-            max-width: rem(370px);
+            max-width: 50%;
+            width: 50%;
+            flex: 1 1 40%;
             height: rem(310px);
-            width: 100%;
             img {
               width: 100%;
               height: 100%;
@@ -55,7 +59,7 @@
 .reverse {
   flex-direction: row-reverse;
   .text_revers {
-    height: rem(390px);
+   max-height: rem(390px);
     top: rem(30px);
   }
   .img_reverse {

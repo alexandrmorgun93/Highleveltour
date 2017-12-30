@@ -59,6 +59,7 @@
 
           .line_block {
             position: absolute;
+            z-index: -1;
             top: rem(50px);
             width: 84%;
             height: rem(340px);
@@ -100,7 +101,6 @@
             font-family: $Sansus_Webissimo;
             font-size: rem(35px);
             font-weight: 400;
-            line-height: 0.85;
             text-transform: uppercase;
             letter-spacing: rem(1.4px);
             margin-bottom: rem(30px);

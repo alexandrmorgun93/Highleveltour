@@ -16,9 +16,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        z-index: 3;
+        z-index: 101;
         .btn {
-          z-index: 4;
+          z-index: 102;
           max-width: rem(357px);
           border: 1px solid $orange_color;
           background-color: transparent;
@@ -35,6 +35,7 @@
         width: 100%;
         left: 0;
         top: 0;
+        z-index: 100;
         background-color: #fff;
         padding: rem(135px) rem(75px) rem(80px);
         visibility: hidden;
@@ -62,12 +63,17 @@
           .region_list {
             width: 100%;
             display: flex;
-            justify-content: space-between;
+            flex-wrap: wrap;
+
             ul {
               display: flex;
-              flex-direction: column;
+              justify-content: space-between;
+              flex-wrap: wrap;
+              width: 100%;
               li {
                 margin-bottom: rem(35px);
+                max-width: 24%;
+                flex: 1 1 24%;
                 &:hover {
                   a {
                     color: $orange_color

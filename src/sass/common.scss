@@ -54,6 +54,7 @@
   font-size: rem(64px);
   font-weight: 400;
   letter-spacing: rem(2.56px);
+  margin-bottom: rem(30px);
 }
 
 .line {
@@ -117,6 +118,7 @@
       margin-top: rem(31px);
       width: 100%;
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       padding: 0 rem(55px);
       .contacts_email, .contacts_phone {
