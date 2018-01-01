@@ -355,7 +355,93 @@ abbr, acronym {
     height: 100%;
     position: relative;
     display: flex;
+    justify-content: space-between;
     align-items: center; }
+    .menu .container .menu_wrap .left_menu {
+      width: 30%;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column; }
+      .menu .container .menu_wrap .left_menu .menu_elem {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative; }
+        .menu .container .menu_wrap .left_menu .menu_elem li {
+          color: #fefefe;
+          margin-bottom: 1.5625rem;
+          position: relative;
+          width: 100%; }
+          .menu .container .menu_wrap .left_menu .menu_elem li:hover {
+            color: #ec6826; }
+          .menu .container .menu_wrap .left_menu .menu_elem li a {
+            letter-spacing: 0.06rem;
+            font-family: "Sansus Webissimo";
+            font-size: 1.5rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            transition: color .4s; }
+        .menu .container .menu_wrap .left_menu .menu_elem .menu_open {
+          display: flex;
+          justify-content: space-between; }
+          .menu .container .menu_wrap .left_menu .menu_elem .menu_open:hover .menu_drop {
+            visibility: visible;
+            opacity: 1;
+            transform: scale(1); }
+          .menu .container .menu_wrap .left_menu .menu_elem .menu_open .menu_drop {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            visibility: hidden;
+            opacity: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            transform: scale(0.1);
+            transition: .4s; }
+    .menu .container .menu_wrap .right_menu {
+      flex: 1 1 34.375rem;
+      max-width: 34.375rem;
+      width: 100%;
+      border: 0.0625rem solid #ec6826;
+      position: relative;
+      padding: 4.0625rem 2.8125rem; }
+      .menu .container .menu_wrap .right_menu .right_menu_content {
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+        .menu .container .menu_wrap .right_menu .right_menu_content .right_menu_text {
+          text-align: center;
+          color: #fefefe;
+          font-family: "Sansus Webissimo";
+          font-size: 1.5rem;
+          font-weight: 400;
+          letter-spacing: 0.06rem; }
+        .menu .container .menu_wrap .right_menu .right_menu_content h3 {
+          margin-bottom: 1.875rem; }
+        .menu .container .menu_wrap .right_menu .right_menu_content p {
+          text-align: center;
+          color: #f4f4f4;
+          font-family: "Roboto";
+          font-size: 1.25rem;
+          font-weight: 300;
+          margin-bottom: 1.875rem; }
+        .menu .container .menu_wrap .right_menu .right_menu_content .phone_menu {
+          display: flex;
+          flex-direction: column;
+          max-width: 20.625rem;
+          width: 100%;
+          border-bottom: 0.0625rem solid #ec6826; }
+          .menu .container .menu_wrap .right_menu .right_menu_content .phone_menu .phone {
+            margin-bottom: 1.25rem; }
+        .menu .container .menu_wrap .right_menu .right_menu_content .social {
+          margin-top: 1.25rem;
+          text-align: center; }
+          .menu .container .menu_wrap .right_menu .right_menu_content .social h4 {
+            margin-bottom: 1.25rem; }
 
 .main_slide {
   width: 100%;

@@ -6,12 +6,123 @@
   background-color: #081b4c;
   opacity: 0.92;
   .container {
+    //display: flex;
+    //justify-content: center;
+    //align-items: center;
     .menu_wrap {
       width: 100%;
       height: 100%;
       position: relative;
       display: flex;
+      justify-content: space-between;
       align-items: center;
+      .left_menu {
+        width: 30%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        .menu_elem {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          li {
+            color: #fefefe;
+            margin-bottom: rem(25px);
+            position: relative;
+            width: 100%;
+            &:hover {
+
+              color: $orange_color;
+            }
+            a {
+              letter-spacing: rem(0.96px);
+              font-family: $Sansus_Webissimo;
+              font-size: rem(24px);
+              font-weight: 400;
+              text-transform: uppercase;
+              transition: color .4s;
+            }
+          }
+          .menu_open {
+            display: flex;
+            justify-content: space-between;
+            &:hover {
+              .menu_drop {
+                visibility: visible;
+                opacity: 1;
+                transform: scale(1);
+
+              }
+            }
+            .menu_drop {
+              position: absolute;
+              top: 0;
+              left: 100%;
+              visibility: hidden;
+              opacity: 0;
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              transform: scale(.1);
+              transition: .4s;
+            }
+          }
+        }
+      }
+      .right_menu {
+        flex: 1 1 rem(550px);
+        max-width: rem(550px);
+        width: 100%;
+        border: rem(1px) solid $orange_color;
+        position: relative;
+        padding: rem(65px) rem(45px);
+        .right_menu_content {
+          width: 100%;
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          .right_menu_text {
+            text-align: center;
+            color: #fefefe;
+            font-family: $Sansus_Webissimo;
+            font-size: rem(24px);
+            font-weight: 400;
+            letter-spacing: rem(0.96px);
+          }
+          h3 {
+            margin-bottom: rem(30px);
+          }
+          p {
+            text-align: center;
+            color: #f4f4f4;
+            font-family: $Roboto;
+            font-size: rem(20px);
+            font-weight: 300;
+            margin-bottom: rem(30px);
+          }
+          .phone_menu {
+            display: flex;
+            flex-direction: column;
+            max-width: rem(330px);
+            width: 100%;
+            border-bottom: rem(1px) solid $orange_color;
+            .phone {
+              margin-bottom: rem(20px);
+
+            }
+          }
+          .social {
+            margin-top: rem(20px);
+            text-align: center;
+            h4 {
+              margin-bottom: rem(20px);
+            }
+          }
+        }
+      }
     }
   }
 }
