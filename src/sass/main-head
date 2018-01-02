@@ -1,8 +1,8 @@
 .main_head {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 101;
   width: 100%;
   height: rem(95px);
   background-color: #081b4c;
@@ -51,6 +51,7 @@
           position: relative;
           top: 0;
           left: 0;
+          z-index: 1;
           cursor: pointer;
           li {
             border-radius: rem(2px);
@@ -65,17 +66,21 @@
           }
 
           &.active {
-            &:first-child {
-              -webkit-transform: rotate(-411deg) translate(-15px, 1px);
-              transform: rotate(-411deg) translate(-15px, 1px);;
-            }
-            &:nth-child(2) {
-              opacity: 0;
-            }
-            &:last-child {
-              -webkit-transform: rotate(412deg) translate(-11px, 2px);
-              transform: rotate(412deg) translate(-11px, 2px);
+            z-index: 110;
+            li {
+              background-color: $orange_color;
+              &:first-child {
+                -webkit-transform: rotate(-220deg) translate(10px, -9px);
+                transform: rotate(-220deg) translate(10px, -9px);
+              }
+              &:nth-child(2) {
+                opacity: 0;
+              }
+              &:last-child {
+                -webkit-transform: rotate(221deg) translate(6px, 5px);
+                transform: rotate(221deg) translate(6px, 5px);
 
+              }
             }
           }
         }

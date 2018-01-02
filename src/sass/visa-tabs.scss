@@ -75,6 +75,7 @@
           padding: rem(50px) rem(80px);
           background-color: #fff;
           opacity: 0;
+          transition: .4s;
           p {
             color: $orange_color;
             font-family: $Sansus_Webissimo;
