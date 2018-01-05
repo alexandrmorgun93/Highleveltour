@@ -90,23 +90,29 @@
               flex-wrap: wrap;
               .menu_right_btn {
                 cursor: pointer;
+                &.active {
+                  color: $orange_color;
+                  transform: rotate(90deg);
+                  z-index: 1;
+                }
               }
               .menu_drop {
-                left: 0;
+                overflow: hidden;
                 position: relative;
-                visibility: visible;
+                visibility: hidden;
                 opacity: 0;
-                padding-left: rem(40px);
-                margin-top: rem(200px);
+                left: rem(40px);
+                margin-top: -100%;
                 li {
+                  display: inline-block;
                   padding: rem(10px) 0;
                   a {
                     font-size: rem(20px);
                   }
                 }
                 &.active {
-                  margin-top: rem(10px);
-                  visibility: hidden;
+                  margin-top: rem(20px);
+                  visibility: visible;
                   opacity: 1;
                 }
               }
@@ -254,6 +260,35 @@
                 left: 20%;
               }
             }
+          }
+        }
+      }
+    }
+  }
+  //VISA SECTION
+  .visa_section {
+    .visa_usa_wrap {
+      .visa_usa {
+        padding: rem(20px) rem(30px);
+        h1 {
+          font-size: rem(40px);
+        }
+        h2 {
+          font-size: rem(25px);
+        }
+      }
+      .visa_usa_info {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0;
+        ul {
+          margin-bottom: rem(10px);
+        }
+        .visa_usa_form {
+          input {
+            text-align: center;
           }
         }
       }
@@ -710,6 +745,39 @@
 
 }
 
+@media screen and (max-width: 620px) {
+  //VISA SECTION
+  .visa_section {
+    .visa_usa_wrap {
+      .visa_usa {
+        padding: rem(40px) rem(30px);
+        h1 {
+          font-size: rem(30px);
+        }
+        h2 {
+          font-size: rem(18px);
+        }
+        .consultation_visa {
+          padding: rem(5px);
+          margin-bottom: rem(5px);
+        }
+      }
+      .visa_usa_info {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0;
+        .visa_usa_form {
+          input {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 560px) {
   //VISA SUPPORT
   .visa_support {
@@ -907,6 +975,41 @@
         margin-right: auto;
         &:nth-child(3n+3) {
           margin-right: auto;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 470px) {
+  //VISA SECTION
+  .visa_section {
+    .visa_usa_wrap {
+      .visa_usa {
+        padding: rem(10px);
+        h1 {
+          font-size: rem(25px);
+        }
+        h2 {
+          font-size: rem(15px);
+        }
+        .consultation_visa {
+
+          margin-bottom: rem(5px);
+          p {
+            font-size: rem(15px);
+          }
+
+        }
+      }
+      .visa_usa_info {
+
+        .visa_usa_form {
+          ul {
+            li {
+              font-size: rem(15px);
+            }
+          }
         }
       }
     }

@@ -360,7 +360,7 @@ abbr, acronym {
   top: -150%;
   left: 0;
   opacity: 0;
-  transition: top .4s; }
+  transition: top .6s; }
   .menu.active {
     opacity: 0.92;
     top: 0; }
@@ -371,7 +371,7 @@ abbr, acronym {
     height: 100%; }
     .menu .container .menu_wrap {
       width: 100%;
-      height: 100%;
+      height: auto;
       position: relative;
       display: flex;
       justify-content: space-between;
@@ -413,10 +413,6 @@ abbr, acronym {
               color: #ffffff;
               margin-right: 0.625rem;
               transition: color .4s, transform .4s; }
-              .menu .container .menu_wrap .left_menu .menu_elem .menu_open .menu_right_btn.active {
-                color: #ec6826;
-                transform: rotate(90deg);
-                z-index: 1; }
         .menu .container .menu_wrap .left_menu .menu_logo {
           margin-top: 1.875rem;
           max-width: 18.75rem;
@@ -1973,7 +1969,8 @@ abbr, acronym {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 3; }
+    z-index: 3;
+    padding: 0 0.9375rem; }
     .visa_section .visa_usa_wrap .visa_usa {
       position: relative;
       max-width: 71.25rem;
@@ -1984,12 +1981,14 @@ abbr, acronym {
       flex-direction: column;
       align-items: center; }
       .visa_section .visa_usa_wrap .visa_usa h1 {
+        text-align: center;
         color: #202532;
         font-family: "Sansus Webissimo";
         font-size: 4rem;
         font-weight: 400;
         letter-spacing: 0.16rem; }
       .visa_section .visa_usa_wrap .visa_usa h2 {
+        text-align: center;
         color: #202532;
         font-family: "Sansus Webissimo";
         font-size: 2.25rem;
@@ -2016,16 +2015,18 @@ abbr, acronym {
       display: flex;
       justify-content: space-between;
       padding-right: 3.75rem; }
-      .visa_section .visa_usa_wrap .visa_usa_info ul li {
-        position: relative;
-        color: #202532;
-        font-family: "Sansus Webissimo";
-        font-size: 1.25rem;
-        font-weight: 400;
-        line-height: 1.8;
-        margin-bottom: 0.625rem; }
-        .visa_section .visa_usa_wrap .visa_usa_info ul li:last-child {
-          margin-bottom: 0; }
+      .visa_section .visa_usa_wrap .visa_usa_info ul {
+        max-width: 26.25rem;
+        width: 100%; }
+        .visa_section .visa_usa_wrap .visa_usa_info ul li {
+          position: relative;
+          color: #202532;
+          font-family: "Sansus Webissimo";
+          font-size: 1.25rem;
+          font-weight: 400;
+          margin-bottom: 0.625rem; }
+          .visa_section .visa_usa_wrap .visa_usa_info ul li:last-child {
+            margin-bottom: 0; }
       .visa_section .visa_usa_wrap .visa_usa_info .visa_usa_form {
         position: relative;
         display: flex;
@@ -2440,20 +2441,25 @@ abbr, acronym {
         flex-wrap: wrap; }
         .menu .container .menu_wrap .left_menu .menu_elem .menu_open .menu_right_btn {
           cursor: pointer; }
+          .menu .container .menu_wrap .left_menu .menu_elem .menu_open .menu_right_btn.active {
+            color: #ec6826;
+            transform: rotate(90deg);
+            z-index: 1; }
         .menu .container .menu_wrap .left_menu .menu_elem .menu_open .menu_drop {
-          left: 0;
+          overflow: hidden;
           position: relative;
-          visibility: visible;
+          visibility: hidden;
           opacity: 0;
-          padding-left: 2.5rem;
-          margin-top: 12.5rem; }
+          left: 2.5rem;
+          margin-top: -100%; }
           .menu .container .menu_wrap .left_menu .menu_elem .menu_open .menu_drop li {
+            display: inline-block;
             padding: 0.625rem 0; }
             .menu .container .menu_wrap .left_menu .menu_elem .menu_open .menu_drop li a {
               font-size: 1.25rem; }
           .menu .container .menu_wrap .left_menu .menu_elem .menu_open .menu_drop.active {
-            margin-top: 0.625rem;
-            visibility: hidden;
+            margin-top: 1.25rem;
+            visibility: visible;
             opacity: 1; }
     .menu .container .menu_wrap .right_menu {
       width: 50%; }
@@ -2526,6 +2532,22 @@ abbr, acronym {
         background-color: rgba(255, 255, 255, 0.7); }
         .top_section .container .top_section_wrap .top_content .content .content_elem .line_home {
           left: 20%; }
+  .visa_section .visa_usa_wrap .visa_usa {
+    padding: 1.25rem 1.875rem; }
+    .visa_section .visa_usa_wrap .visa_usa h1 {
+      font-size: 2.5rem; }
+    .visa_section .visa_usa_wrap .visa_usa h2 {
+      font-size: 1.5625rem; }
+  .visa_section .visa_usa_wrap .visa_usa_info {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0; }
+    .visa_section .visa_usa_wrap .visa_usa_info ul {
+      margin-bottom: 0.625rem; }
+    .visa_section .visa_usa_wrap .visa_usa_info .visa_usa_form input {
+      text-align: center; }
   .france_day_content .container p {
     width: 100%; }
   .france_day_content .container .france_day_img {
@@ -2707,6 +2729,25 @@ abbr, acronym {
   .price_services p {
     font-size: 1.125rem; } }
 
+@media screen and (max-width: 620px) {
+  .visa_section .visa_usa_wrap .visa_usa {
+    padding: 2.5rem 1.875rem; }
+    .visa_section .visa_usa_wrap .visa_usa h1 {
+      font-size: 1.875rem; }
+    .visa_section .visa_usa_wrap .visa_usa h2 {
+      font-size: 1.125rem; }
+    .visa_section .visa_usa_wrap .visa_usa .consultation_visa {
+      padding: 0.3125rem;
+      margin-bottom: 0.3125rem; }
+  .visa_section .visa_usa_wrap .visa_usa_info {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0; }
+    .visa_section .visa_usa_wrap .visa_usa_info .visa_usa_form input {
+      text-align: center; } }
+
 @media screen and (max-width: 560px) {
   .visa_support .container .visa_support_content .visa_support_elem .visa_support_text h2 {
     font-size: 1.25rem; }
@@ -2774,6 +2815,20 @@ abbr, acronym {
     margin-right: auto; }
     .concrete_content .concrete_img .concrete_img_elem:nth-child(3n+3) {
       margin-right: auto; } }
+
+@media screen and (max-width: 470px) {
+  .visa_section .visa_usa_wrap .visa_usa {
+    padding: 0.625rem; }
+    .visa_section .visa_usa_wrap .visa_usa h1 {
+      font-size: 1.5625rem; }
+    .visa_section .visa_usa_wrap .visa_usa h2 {
+      font-size: 0.9375rem; }
+    .visa_section .visa_usa_wrap .visa_usa .consultation_visa {
+      margin-bottom: 0.3125rem; }
+      .visa_section .visa_usa_wrap .visa_usa .consultation_visa p {
+        font-size: 0.9375rem; }
+  .visa_section .visa_usa_wrap .visa_usa_info .visa_usa_form ul li {
+    font-size: 0.9375rem; } }
 
 @media screen and (min-width: 1280px) {
   .menu .container .menu_wrap .left_menu .menu_elem .menu_open:hover .menu_right_btn {
