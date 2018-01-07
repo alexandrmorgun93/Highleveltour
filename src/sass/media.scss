@@ -82,8 +82,10 @@
     overflow: scroll;
     .container {
       .menu_wrap {
+        padding: rem(100px) 0 rem(50px);
+        align-items: flex-start;
         .left_menu {
-          width: 50%;
+          width: 100%;
           .menu_elem {
             .menu_open {
               position: relative;
@@ -97,18 +99,13 @@
                 }
               }
               .menu_drop {
-                overflow: hidden;
                 position: relative;
                 visibility: hidden;
                 opacity: 0;
                 left: rem(40px);
                 margin-top: -100%;
-                li {
+                li a {
                   display: inline-block;
-                  padding: rem(10px) 0;
-                  a {
-                    font-size: rem(20px);
-                  }
                 }
                 &.active {
                   margin-top: rem(20px);
@@ -120,7 +117,7 @@
           }
         }
         .right_menu {
-          width: 50%;
+          width: 100%;
         }
       }
     }
@@ -197,6 +194,93 @@
       }
     }
   }
+
+  .visa_america {
+    .visa_america_wrap {
+      .america_content {
+        .container_visa {
+          padding: 0 rem(10px);
+          .btn_form {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            position: absolute;
+            top: rem(10px);
+            z-index: 1;
+            cursor: pointer;
+            border: rem(3px) solid $orange_color;
+            width: rem(60px);
+            padding: rem(10px);
+            li {
+              border-radius: rem(2px);
+              width: rem(34px);
+              height: 3px;
+              background-color: #fff;
+              transition: background-color .4s .1s;
+              &:nth-child(2) {
+                margin: rem(8px) 0;
+              }
+            }
+            &.active {
+              z-index: 100;
+              li {
+                background-color: $orange_color;
+                &:first-child {
+                  -webkit-transform: rotate(-220deg) translate(10px, -9px);
+                  transform: rotate(-220deg) translate(10px, -9px);
+                }
+                &:nth-child(2) {
+                  opacity: 0;
+                }
+                &:last-child {
+                  -webkit-transform: rotate(219deg) translate(6px, 6px);;
+                  transform: rotate(219deg) translate(6px, 6px);;
+
+                }
+              }
+            }
+          }
+          h2 {
+            max-width: none;
+            text-align: center;
+          }
+          .america_form {
+            visibility: hidden;
+            opacity: 0;
+            transition: .4s .3s;
+            left: calc(50% - 250px);
+            &.active {
+              visibility: visible;
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+  //AMERICA PRICE
+  .america_visa_price {
+    .container_visa {
+      .america_price_content {
+        flex-direction: column;
+        justify-content: center;
+        .price_list {
+          text-align: center;
+          margin-top: rem(20px);
+          ul {
+            li {
+              margin-left: 0;
+            }
+          }
+
+        }
+      }
+    }
+  }
   //PRICE SERVICES
   .price_services {
     padding: rem(50px) 0;
@@ -237,6 +321,25 @@
     .bottom_elem {
       p {
         font-size: rem(30px);
+      }
+    }
+  }
+  //MENU
+  .menu {
+
+    .container {
+      .menu_wrap {
+        flex-wrap: wrap;
+        justify-content: center;
+        .left_menu {
+          justify-content: center;
+          align-items: center;
+          width: 50%;
+        }
+        .right_menu {
+          max-width: rem(550px);
+          width: 100%;
+        }
       }
     }
   }
@@ -410,23 +513,7 @@
       }
     }
   }
-  ////MENU
-  //.menu {
-  //  overflow-x: hidden;
-  //  overflow-y: scroll;
-  //  .container {
-  //    .menu_wrap {
-  //      flex-direction: column;
-  //      justify-content: center;
-  //      .left_menu {
-  //        margin-bottom: rem(30px);
-  //        .menu_elem {
-  //          align-self: center;
-  //        }
-  //      }
-  //    }
-  //  }
-  //}
+
 }
 
 @media screen and (max-width: 920px) {
@@ -647,6 +734,20 @@
       }
     }
   }
+  //VISA AMERICA
+  .visa_america {
+    .visa_america_wrap {
+      .america_content {
+        .container_visa {
+          .america_form {
+            padding: rem(60px) rem(30px);
+            left: calc(50% - 150px);
+            top: rem(-40px);
+          }
+        }
+      }
+    }
+  }
   //MAIN SLIDE
   .main_slide {
     .main_slide_wrap {
@@ -742,7 +843,24 @@
       font-size: rem(18px);
     }
   }
+  //MENU
+  .menu {
 
+    .container {
+      .menu_wrap {
+        .left_menu {
+          .menu_elem {
+            li {
+              padding: rem(5px) 0;
+              a {
+                font-size: rem(15px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 620px) {
@@ -850,6 +968,25 @@
                 left: 70%;
               }
             }
+          }
+        }
+      }
+    }
+  }
+  //VISA AMERICA
+  .visa_america {
+    .visa_america_wrap {
+      .america_content {
+        .container_visa {
+          .btn_form {
+            transition: top .4s .3s;
+            &.active{
+              top: rem(-30px);
+            }
+          }
+          .america_form {
+            padding: rem(60px) rem(30px);
+            left: auto;
           }
         }
       }
@@ -975,6 +1112,39 @@
         margin-right: auto;
         &:nth-child(3n+3) {
           margin-right: auto;
+        }
+      }
+    }
+  }
+  //MENU
+  .menu {
+
+    .container {
+      .menu_wrap {
+        .left_menu {
+          .menu_elem {
+            li {
+
+              a {
+                font-size: rem(12px);
+              }
+            }
+            .menu_open {
+              .menu_right_btn {
+                font-size: rem(12px);
+              }
+            }
+          }
+        }
+        .right_menu {
+          .right_menu_content {
+            .right_menu_text {
+              font-size: rem(15px);
+            }
+            p {
+              font-size: rem(12px);
+            }
+          }
         }
       }
     }

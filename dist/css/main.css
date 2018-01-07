@@ -329,8 +329,8 @@ abbr, acronym {
             .main_head .container .main_head_wrap .menu_btn .menu_btn_content.active li:nth-child(2) {
               opacity: 0; }
             .main_head .container .main_head_wrap .menu_btn .menu_btn_content.active li:last-child {
-              -webkit-transform: rotate(221deg) translate(6px, 5px);
-              transform: rotate(221deg) translate(6px, 5px); }
+              -webkit-transform: rotate(219deg) translate(6px, 6px);
+              transform: rotate(219deg) translate(6px, 6px); }
     .main_head .container .main_head_wrap .logo {
       max-width: 18.75rem;
       width: 100%; }
@@ -367,7 +367,6 @@ abbr, acronym {
   .menu .container {
     display: flex;
     justify-content: center;
-    align-items: center;
     height: 100%; }
     .menu .container .menu_wrap {
       width: 100%;
@@ -415,8 +414,7 @@ abbr, acronym {
               transition: color .4s, transform .4s; }
         .menu .container .menu_wrap .left_menu .menu_logo {
           margin-top: 1.875rem;
-          max-width: 18.75rem;
-          height: 3.125rem; }
+          max-width: 18.75rem; }
           .menu .container .menu_wrap .left_menu .menu_logo img {
             width: 100%;
             height: 100%;
@@ -462,43 +460,49 @@ abbr, acronym {
             text-align: center; }
             .menu .container .menu_wrap .right_menu .right_menu_content .social h4 {
               margin-bottom: 1.25rem; }
+            .menu .container .menu_wrap .right_menu .right_menu_content .social a {
+              font-size: 1.875rem;
+              color: #ec6826; }
+              .menu .container .menu_wrap .right_menu .right_menu_content .social a:hover {
+                transform: scale(1.1); }
 
 .main_slide {
   width: 100%;
   height: 100vh;
   position: relative;
   overflow: hidden; }
-  .main_slide::before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(7, 25, 71, 0.75);
-    z-index: 2;
-    background: linear-gradient(0deg, rgba(7, 25, 71, 0.75), transparent); }
   .main_slide .main_slide_wrap {
     width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: space-between; }
+    height: 100vh;
+    position: relative; }
     .main_slide .main_slide_wrap .main_slide_elem {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      position: relative;
+      position: absolute;
+      top: 0;
       width: 100%;
-      height: 100vh; }
+      height: 100%;
+      opacity: 0;
+      left: 0;
+      transform: scale(0.2);
+      transition: .3s; }
+      .main_slide .main_slide_wrap .main_slide_elem::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(7, 25, 71, 0.75);
+        z-index: 1;
+        background: linear-gradient(0deg, rgba(7, 25, 71, 0.75), transparent); }
       .main_slide .main_slide_wrap .main_slide_elem .main_img {
         position: absolute;
-        z-index: 0;
         top: 0;
         left: 0;
+        z-index: 0;
         width: 100%;
         height: 100%; }
         .main_slide .main_slide_wrap .main_slide_elem .main_img img {
@@ -515,27 +519,55 @@ abbr, acronym {
           font-size: 4rem;
           font-weight: 400;
           line-height: 0.46;
+          position: relative;
+          z-index: 4;
+          top: -30px;
+          transition: .4s .5s;
+          opacity: 0;
           letter-spacing: 0.16rem;
           margin-bottom: 1.5625rem; }
         .main_slide .main_slide_wrap .main_slide_elem .main_slide_text .title_item {
+          position: relative;
+          bottom: -3.125rem;
           color: #ffffff;
           font-family: "Roboto";
           font-size: 2.0625rem;
           font-weight: 300;
           line-height: 0.90;
           letter-spacing: 0.0825rem;
-          margin-bottom: 3.125rem; }
+          margin-bottom: 3.125rem;
+          transition: .4s .7s;
+          opacity: 0; }
         .main_slide .main_slide_wrap .main_slide_elem .main_slide_text .btn {
           position: relative;
-          max-width: 14.0625rem; }
+          max-width: 14.0625rem;
+          bottom: -6.25rem;
+          transition: .3s .9s, background-color .4s, color .4s;
+          opacity: 0; }
           .main_slide .main_slide_wrap .main_slide_elem .main_slide_text .btn::before {
             content: "";
             display: block;
             position: absolute;
             width: 0.0625rem;
-            height: 1.5625rem;
+            height: 0;
             background-color: #ffffff;
             left: 50%;
+            top: 0;
+            transition: height .3s 1.3s; }
+      .main_slide .main_slide_wrap .main_slide_elem.active {
+        opacity: 1;
+        transform: scale(1); }
+        .main_slide .main_slide_wrap .main_slide_elem.active .main_slide_text .main_title {
+          top: 0;
+          opacity: 1; }
+        .main_slide .main_slide_wrap .main_slide_elem.active .main_slide_text .title_item {
+          bottom: 0;
+          opacity: 1; }
+        .main_slide .main_slide_wrap .main_slide_elem.active .main_slide_text .btn {
+          bottom: 0;
+          opacity: 1; }
+          .main_slide .main_slide_wrap .main_slide_elem.active .main_slide_text .btn::before {
+            height: 1.5625rem;
             top: -1.5625rem; }
   .main_slide .slide_control {
     width: 100%;
@@ -567,6 +599,22 @@ abbr, acronym {
           transition: color .4s; }
           .main_slide .slide_control .container .left_control .right_btn:hover, .main_slide .slide_control .container .left_control .left_btn:hover {
             color: #ec6826; }
+      .main_slide .slide_control .container .right_control {
+        display: flex;
+        position: relative;
+        align-items: center; }
+        .main_slide .slide_control .container .right_control .dots {
+          margin-left: 0.5625rem;
+          width: 0.8125rem;
+          height: 0.8125rem;
+          background-color: transparent;
+          border: 0.125rem solid #ffffff;
+          border-radius: 50%;
+          transition: background-color 0.6s ease; }
+          .main_slide .slide_control .container .right_control .dots:hover, .main_slide .slide_control .container .right_control .dots.active {
+            background-color: #ffffff; }
+          .main_slide .slide_control .container .right_control .dots:first-child {
+            margin-left: 0; }
 
 .form_section {
   width: 100%;
@@ -2102,7 +2150,9 @@ abbr, acronym {
       position: relative;
       width: 100%;
       background-color: #1a2b55; }
-      .visa_america .visa_america_wrap .america_content .container_visa h2 {
+      .visa_america .visa_america_wrap .america_content .container_visa .btn_form {
+        display: none; }
+      .visa_america .visa_america_wrap .america_content h2 {
         color: #ffffff;
         font-family: "Sansus Webissimo";
         font-size: 2.5625rem;
@@ -2111,12 +2161,13 @@ abbr, acronym {
         text-transform: uppercase;
         max-width: 40.625rem;
         width: 100%;
+        flex: 1 1 30%;
         padding: 5rem 0;
         letter-spacing: 0.1375rem; }
-        .visa_america .visa_america_wrap .america_content .container_visa h2 span {
+        .visa_america .visa_america_wrap .america_content h2 span {
           color: #ec6826;
           font-size: 3.4375rem; }
-      .visa_america .visa_america_wrap .america_content .container_visa .america_form {
+      .visa_america .visa_america_wrap .america_content .america_form {
         position: absolute;
         top: -4.375rem;
         right: 0;
@@ -2125,7 +2176,7 @@ abbr, acronym {
         width: 100%;
         padding: 6.25rem 3.4375rem;
         background-color: #fff; }
-        .visa_america .visa_america_wrap .america_content .container_visa .america_form h3 {
+        .visa_america .visa_america_wrap .america_content .america_form h3 {
           text-align: center;
           color: #ec6826;
           font-family: "Sansus Webissimo";
@@ -2135,12 +2186,12 @@ abbr, acronym {
           text-transform: uppercase;
           letter-spacing: 0.065rem;
           margin-bottom: 2.5rem; }
-        .visa_america .visa_america_wrap .america_content .container_visa .america_form .america_feedback {
+        .visa_america .visa_america_wrap .america_content .america_form .america_feedback {
           position: revert;
           display: flex;
           flex-direction: column;
           justify-content: center; }
-          .visa_america .visa_america_wrap .america_content .container_visa .america_form .america_feedback input {
+          .visa_america .visa_america_wrap .america_content .america_form .america_feedback input {
             max-width: 21rem;
             width: 100%;
             border: none;
@@ -2153,7 +2204,7 @@ abbr, acronym {
             line-height: 1.5;
             letter-spacing: 0.05rem;
             margin-bottom: 1.25rem; }
-          .visa_america .visa_america_wrap .america_content .container_visa .america_form .america_feedback .btn {
+          .visa_america .visa_america_wrap .america_content .america_form .america_feedback .btn {
             margin-top: 1.875rem;
             border: 0.0625rem solid #ec6826; }
 
@@ -2434,35 +2485,34 @@ abbr, acronym {
         margin-right: 0; }
   .menu {
     overflow: scroll; }
-    .menu .container .menu_wrap .left_menu {
-      width: 50%; }
-      .menu .container .menu_wrap .left_menu .menu_elem .menu_open {
-        position: relative;
-        flex-wrap: wrap; }
-        .menu .container .menu_wrap .left_menu .menu_elem .menu_open .menu_right_btn {
-          cursor: pointer; }
-          .menu .container .menu_wrap .left_menu .menu_elem .menu_open .menu_right_btn.active {
-            color: #ec6826;
-            transform: rotate(90deg);
-            z-index: 1; }
-        .menu .container .menu_wrap .left_menu .menu_elem .menu_open .menu_drop {
-          overflow: hidden;
+    .menu .container .menu_wrap {
+      padding: 6.25rem 0 3.125rem;
+      align-items: flex-start; }
+      .menu .container .menu_wrap .left_menu {
+        width: 100%; }
+        .menu .container .menu_wrap .left_menu .menu_elem .menu_open {
           position: relative;
-          visibility: hidden;
-          opacity: 0;
-          left: 2.5rem;
-          margin-top: -100%; }
-          .menu .container .menu_wrap .left_menu .menu_elem .menu_open .menu_drop li {
-            display: inline-block;
-            padding: 0.625rem 0; }
+          flex-wrap: wrap; }
+          .menu .container .menu_wrap .left_menu .menu_elem .menu_open .menu_right_btn {
+            cursor: pointer; }
+            .menu .container .menu_wrap .left_menu .menu_elem .menu_open .menu_right_btn.active {
+              color: #ec6826;
+              transform: rotate(90deg);
+              z-index: 1; }
+          .menu .container .menu_wrap .left_menu .menu_elem .menu_open .menu_drop {
+            position: relative;
+            visibility: hidden;
+            opacity: 0;
+            left: 2.5rem;
+            margin-top: -100%; }
             .menu .container .menu_wrap .left_menu .menu_elem .menu_open .menu_drop li a {
-              font-size: 1.25rem; }
-          .menu .container .menu_wrap .left_menu .menu_elem .menu_open .menu_drop.active {
-            margin-top: 1.25rem;
-            visibility: visible;
-            opacity: 1; }
-    .menu .container .menu_wrap .right_menu {
-      width: 50%; }
+              display: inline-block; }
+            .menu .container .menu_wrap .left_menu .menu_elem .menu_open .menu_drop.active {
+              margin-top: 1.25rem;
+              visibility: visible;
+              opacity: 1; }
+      .menu .container .menu_wrap .right_menu {
+        width: 100%; }
   .top_section .container .top_section_wrap .top_content .content {
     padding: 0; }
     .top_section .container .top_section_wrap .top_content .content .content_elem {
@@ -2496,6 +2546,62 @@ abbr, acronym {
       border: 0.0625rem solid #ec6826; }
   .europe_section .container .region_content .select_region .region_content_wrap {
     padding: 8.4375rem 0 5rem; }
+  .visa_america .visa_america_wrap .america_content .container_visa {
+    padding: 0 0.625rem; }
+    .visa_america .visa_america_wrap .america_content .container_visa .btn_form {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      position: absolute;
+      top: 0.625rem;
+      z-index: 1;
+      cursor: pointer;
+      border: 0.1875rem solid #ec6826;
+      width: 3.75rem;
+      padding: 0.625rem; }
+      .visa_america .visa_america_wrap .america_content .container_visa .btn_form li {
+        border-radius: 0.125rem;
+        width: 2.125rem;
+        height: 3px;
+        background-color: #fff;
+        transition: background-color .4s .1s; }
+        .visa_america .visa_america_wrap .america_content .container_visa .btn_form li:nth-child(2) {
+          margin: 0.5rem 0; }
+      .visa_america .visa_america_wrap .america_content .container_visa .btn_form.active {
+        z-index: 100; }
+        .visa_america .visa_america_wrap .america_content .container_visa .btn_form.active li {
+          background-color: #ec6826; }
+          .visa_america .visa_america_wrap .america_content .container_visa .btn_form.active li:first-child {
+            -webkit-transform: rotate(-220deg) translate(10px, -9px);
+            transform: rotate(-220deg) translate(10px, -9px); }
+          .visa_america .visa_america_wrap .america_content .container_visa .btn_form.active li:nth-child(2) {
+            opacity: 0; }
+          .visa_america .visa_america_wrap .america_content .container_visa .btn_form.active li:last-child {
+            -webkit-transform: rotate(219deg) translate(6px, 6px);
+            transform: rotate(219deg) translate(6px, 6px); }
+    .visa_america .visa_america_wrap .america_content .container_visa h2 {
+      max-width: none;
+      text-align: center; }
+    .visa_america .visa_america_wrap .america_content .container_visa .america_form {
+      visibility: hidden;
+      opacity: 0;
+      transition: .4s .3s;
+      left: calc(50% - 250px); }
+      .visa_america .visa_america_wrap .america_content .container_visa .america_form.active {
+        visibility: visible;
+        opacity: 1; }
+  .america_visa_price .container_visa .america_price_content {
+    flex-direction: column;
+    justify-content: center; }
+    .america_visa_price .container_visa .america_price_content .price_list {
+      text-align: center;
+      margin-top: 1.25rem; }
+      .america_visa_price .container_visa .america_price_content .price_list ul li {
+        margin-left: 0; }
   .price_services {
     padding: 3.125rem 0; }
     .price_services .services_title::before, .price_services .services_title::after {
@@ -2518,6 +2624,16 @@ abbr, acronym {
       background-color: rgba(255, 255, 255, 0.6); }
   .visa_support_bottom .bottom_elem p {
     font-size: 1.875rem; }
+  .menu .container .menu_wrap {
+    flex-wrap: wrap;
+    justify-content: center; }
+    .menu .container .menu_wrap .left_menu {
+      justify-content: center;
+      align-items: center;
+      width: 50%; }
+    .menu .container .menu_wrap .right_menu {
+      max-width: 34.375rem;
+      width: 100%; }
   .top_section .container .top_section_wrap .top_content {
     max-width: 100%;
     width: 100%;
@@ -2689,6 +2805,10 @@ abbr, acronym {
     .main_footer .container .footer_wrap .left_footer ul li {
       margin-left: 0;
       margin-bottom: 0.625rem; }
+  .visa_america .visa_america_wrap .america_content .container_visa .america_form {
+    padding: 3.75rem 1.875rem;
+    left: calc(50% - 150px);
+    top: -2.5rem; }
   .main_slide .main_slide_wrap .main_slide_elem .main_slide_text .main_title {
     font-size: 2.8125rem; }
   .main_slide .main_slide_wrap .main_slide_elem .main_slide_text .title_item {
@@ -2727,7 +2847,11 @@ abbr, acronym {
     margin-bottom: 1.25rem;
     line-height: 1; }
   .price_services p {
-    font-size: 1.125rem; } }
+    font-size: 1.125rem; }
+  .menu .container .menu_wrap .left_menu .menu_elem li {
+    padding: 0.3125rem 0; }
+    .menu .container .menu_wrap .left_menu .menu_elem li a {
+      font-size: 0.9375rem; } }
 
 @media screen and (max-width: 620px) {
   .visa_section .visa_usa_wrap .visa_usa {
@@ -2772,6 +2896,13 @@ abbr, acronym {
       font-size: 1.0625rem; }
     .top_section .container .top_section_wrap .top_content .content .content_elem .btn {
       left: 70%; }
+  .visa_america .visa_america_wrap .america_content .container_visa .btn_form {
+    transition: top .4s .3s; }
+    .visa_america .visa_america_wrap .america_content .container_visa .btn_form.active {
+      top: -1.875rem; }
+  .visa_america .visa_america_wrap .america_content .container_visa .america_form {
+    padding: 3.75rem 1.875rem;
+    left: auto; }
   .main_slide .main_slide_wrap .main_slide_elem .main_slide_text .main_title {
     font-size: 1.875rem;
     line-height: 1; }
@@ -2814,7 +2945,15 @@ abbr, acronym {
     flex: 1 1 100%;
     margin-right: auto; }
     .concrete_content .concrete_img .concrete_img_elem:nth-child(3n+3) {
-      margin-right: auto; } }
+      margin-right: auto; }
+  .menu .container .menu_wrap .left_menu .menu_elem li a {
+    font-size: 0.75rem; }
+  .menu .container .menu_wrap .left_menu .menu_elem .menu_open .menu_right_btn {
+    font-size: 0.75rem; }
+  .menu .container .menu_wrap .right_menu .right_menu_content .right_menu_text {
+    font-size: 0.9375rem; }
+  .menu .container .menu_wrap .right_menu .right_menu_content p {
+    font-size: 0.75rem; } }
 
 @media screen and (max-width: 470px) {
   .visa_section .visa_usa_wrap .visa_usa {

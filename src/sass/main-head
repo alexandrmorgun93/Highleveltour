@@ -77,8 +77,8 @@
                 opacity: 0;
               }
               &:last-child {
-                -webkit-transform: rotate(221deg) translate(6px, 5px);
-                transform: rotate(221deg) translate(6px, 5px);
+                -webkit-transform: rotate(219deg) translate(6px, 6px);;
+                transform: rotate(219deg) translate(6px, 6px);;
 
               }
             }

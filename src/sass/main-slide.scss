@@ -3,33 +3,34 @@
   height: 100vh;
   position: relative;
   overflow: hidden;
-  &::before {
-    @include before_fig(100%, 100%, rgba(7, 25, 71, 0.75));
-    z-index: 2;
-    background: linear-gradient(0deg, rgba(7, 25, 71, .75), transparent)
-  }
   .main_slide_wrap {
     width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: space-between;
+    height: 100vh;
+    position: relative;
     .main_slide_elem {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      position: relative;
+      position: absolute;
+      top: 0;
       width: 100%;
-      height: 100vh;
+      height: 100%;
+      opacity: 0;
+      left: 0;
+      transform: scale(.2);
+      transition: .3s;
+      &::before {
+        @include before_fig(100%, 100%, rgba(7, 25, 71, 0.75));
+        z-index: 1;
+        background: linear-gradient(0deg, rgba(7, 25, 71, .75), transparent)
+      }
       .main_img {
         position: absolute;
-        z-index: 0;
         top: 0;
         left: 0;
+        z-index: 0;
         width: 100%;
         height: 100%;
         img {
@@ -48,10 +49,17 @@
           font-size: rem(64px);
           font-weight: 400;
           line-height: 0.46;
+          position: relative;
+          z-index: 4;
+          top: -30px;
+          transition: .4s .5s;
+          opacity: 0;
           letter-spacing: rem(2.56px);
           margin-bottom: rem(25px);
         }
         .title_item {
+          position: relative;
+          bottom: rem(-50px);
           color: #ffffff;
           font-family: $Roboto;
           font-size: rem(33px);
@@ -59,14 +67,42 @@
           line-height: 0.90;
           letter-spacing: rem(1.32px);
           margin-bottom: rem(50px);
+          transition: .4s .7s;
+          opacity: 0;
         }
         .btn {
           position: relative;
           max-width: rem(225px);
+          bottom: rem(-100px);
+          transition: .3s .9s, background-color .4s, color .4s;
+          opacity: 0;
           &::before {
-            @include before_fig(rem(1px), rem(25px), #ffffff);
+            @include before_fig(rem(1px), 0, #ffffff);
             left: 50%;
-            top: rem(-25px);
+            top: 0;
+            transition: height .3s 1.3s;
+          }
+        }
+      }
+      &.active {
+        opacity: 1;
+        transform: scale(1);
+        .main_slide_text {
+          .main_title {
+            top: 0;
+            opacity: 1;
+          }
+          .title_item {
+            bottom: 0;
+            opacity: 1;
+          }
+          .btn {
+            bottom: 0;
+            opacity: 1;
+            &::before {
+              height: rem(25px);
+              top: rem(-25px)
+            }
           }
         }
       }
@@ -98,6 +134,26 @@
           transition: color .4s;
           &:hover {
             color: $orange_color;
+          }
+        }
+      }
+      .right_control {
+        display: flex;
+        position: relative;
+        align-items: center;
+        .dots {
+          margin-left: rem(9px);
+          width: rem(13px);
+          height: rem(13px);
+          background-color: transparent;
+          border: rem(2px) solid #ffffff;
+          border-radius: 50%;
+          transition: background-color 0.6s ease;
+          &:hover, &.active {
+            background-color: #ffffff;
+          }
+          &:first-child {
+            margin-left: 0;
           }
         }
       }
