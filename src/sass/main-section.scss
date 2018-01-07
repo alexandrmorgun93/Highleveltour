@@ -6,6 +6,7 @@
   &::before {
     @include before_fig(100%, 100%, rgba(7, 25, 71, 0.75));
     z-index: 2;
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(7, 25, 71, .75)), to(transparent));
     background: linear-gradient(0deg, rgba(7, 25, 71, .75), transparent)
   }
   .parallax {
@@ -15,14 +16,25 @@
     width: 100%;
     position: relative;
     z-index: 3;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     height: 100%;
     .main_content {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: column;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
       text-align: center;
-      justify-content: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
       .main_title_item {
         position: relative;
         display: block;
@@ -61,12 +73,18 @@
       .arrow_down {
         position: absolute;
         bottom: rem(70px);
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
         display: inline-flex;
-        justify-content: center;
-        align-self: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -ms-flex-item-align: center;
+            align-self: center;
         font-size: rem(20px);
         color: $orange_color;
-        animation: arrowUp 2s infinite;
+        -webkit-animation: arrowUp 2s infinite;
+                animation: arrowUp 2s infinite;
         &::before {
           @include before_fig(rem(1px), rem(50px), #fff);
           top: rem(-50px);
@@ -75,9 +93,15 @@
           width: rem(41px);
           height: (41px);
           border: rem(1px) solid #dadada;
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
-          align-items: center;
-          justify-content: center;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
         }
       }
     }

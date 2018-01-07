@@ -7,21 +7,30 @@
     .sentence_content {
       width: 100%;
       position: relative;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
       .sentence_elem {
         position: relative;
         max-width: rem(487px);
         width: 100%;
-        flex: 1 1 30%;
+        -webkit-box-flex: 1;
+            -ms-flex: 1 1 30%;
+                flex: 1 1 30%;
         overflow: hidden;
         max-height: rem(530px);
         margin-bottom: rem(30px);
         margin-right: rem(20px);
         &:nth-child(2), &:nth-child(3) {
           max-width: rem(1000px);
-          flex: 1 1 100%;
+          -webkit-box-flex: 1;
+              -ms-flex: 1 1 100%;
+                  flex: 1 1 100%;
           width: 100%;
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
          max-height: none;
           .sentence_img {
@@ -50,7 +59,8 @@
           img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            -o-object-fit: cover;
+               object-fit: cover;
           }
         }
         .sentence_text {

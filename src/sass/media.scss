@@ -2,10 +2,14 @@
   .special_sentence {
     .container {
       .sentence_content {
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         .sentence_elem {
           &:first-child {
-            order: 1;
+            -webkit-box-ordinal-group: 2;
+                -ms-flex-order: 1;
+                    order: 1;
           }
         }
       }
@@ -44,7 +48,9 @@
     .container {
       .sentence_content {
         .sentence_elem {
-          flex: 1 1 50%;
+          -webkit-box-flex: 1;
+              -ms-flex: 1 1 50%;
+                  flex: 1 1 50%;
         }
       }
     }
@@ -55,7 +61,9 @@
       .hotel_img {
         .img_content {
           .img_elem {
-            flex: 1 1 40%;
+            -webkit-box-flex: 1;
+                -ms-flex: 1 1 40%;
+                    flex: 1 1 40%;
           }
         }
       }
@@ -64,12 +72,17 @@
   //CONCRETE CONTENT
   .concrete_content {
     .concrete_img {
-      flex-wrap: wrap;
-      justify-content: center;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
       .concrete_img_elem {
         max-width: 30%;
         width: 30%;
-        flex: 1 1 30%;
+        -webkit-box-flex: 1;
+            -ms-flex: 1 1 30%;
+                flex: 1 1 30%;
         margin: 0 rem(10px) rem(10px) 0;
         &:nth-child(3n+3) {
           margin-right: 0;
@@ -83,18 +96,22 @@
     .container {
       .menu_wrap {
         padding: rem(100px) 0 rem(50px);
-        align-items: flex-start;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
         .left_menu {
           width: 100%;
           .menu_elem {
             .menu_open {
               position: relative;
-              flex-wrap: wrap;
+              -ms-flex-wrap: wrap;
+                  flex-wrap: wrap;
               .menu_right_btn {
                 cursor: pointer;
                 &.active {
                   color: $orange_color;
-                  transform: rotate(90deg);
+                  -webkit-transform: rotate(90deg);
+                          transform: rotate(90deg);
                   z-index: 1;
                 }
               }
@@ -136,6 +153,7 @@
                 left: 25%;
                 span {
                   visibility: visible;
+                  -webkit-transition: .4s;
                   transition: .4s;
                   opacity: 1;
                 }
@@ -165,9 +183,16 @@
       .visa_tabs_wrap {
         .tabs_head {
           padding: 0 rem(15px);
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
           .tabs_btn {
             max-width: rem(550px);
             width: 100%;
@@ -220,6 +245,7 @@
               width: rem(34px);
               height: 3px;
               background-color: #fff;
+              -webkit-transition: background-color .4s .1s;
               transition: background-color .4s .1s;
               &:nth-child(2) {
                 margin: rem(8px) 0;
@@ -251,6 +277,7 @@
           .america_form {
             visibility: hidden;
             opacity: 0;
+            -webkit-transition: .4s .3s;
             transition: .4s .3s;
             left: calc(50% - 250px);
             &.active {
@@ -266,8 +293,13 @@
   .america_visa_price {
     .container_visa {
       .america_price_content {
-        flex-direction: column;
-        justify-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         .price_list {
           text-align: center;
           margin-top: rem(20px);
@@ -329,11 +361,18 @@
 
     .container {
       .menu_wrap {
-        flex-wrap: wrap;
-        justify-content: center;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         .left_menu {
-          justify-content: center;
-          align-items: center;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
           width: 50%;
         }
         .right_menu {
@@ -350,7 +389,9 @@
         .top_content {
           max-width: 100%;
           width: 100%;
-          flex: 1 1 100%;
+          -webkit-box-flex: 1;
+              -ms-flex: 1 1 100%;
+                  flex: 1 1 100%;
           height: rem(350px);
           margin-bottom: rem(20px);
           border: rem(1px) solid $orange_color;
@@ -381,9 +422,16 @@
         }
       }
       .visa_usa_info {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         text-align: center;
         padding: 0;
         ul {
@@ -404,10 +452,13 @@
         width: 100%;
       }
       .france_day_img {
-        flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
         .day_img_elem {
           max-width: none;
-          flex: 1 1 40%;
+          -webkit-box-flex: 1;
+              -ms-flex: 1 1 40%;
+                  flex: 1 1 40%;
         }
       }
     }
@@ -428,7 +479,9 @@
       position: relative;
       bottom: auto;
       .container {
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
       }
     }
   }
@@ -460,7 +513,9 @@
         margin-left: 0;
         .img_content {
           .img_elem {
-            flex: 1 1 30%;
+            -webkit-box-flex: 1;
+                -ms-flex: 1 1 30%;
+                    flex: 1 1 30%;
           }
         }
       }
@@ -471,8 +526,13 @@
     .container {
       .france_info_wrap {
         .france_info_content {
-          justify-content: center;
-          flex-direction: column;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
           .info_text {
             max-width: none;
             p {
@@ -483,7 +543,11 @@
             max-width: none;
             .info_img {
 
-              flex: 1 1 30%;
+              -webkit-box-flex: 1;
+
+                  -ms-flex: 1 1 30%;
+
+                      flex: 1 1 30%;
             }
           }
         }
@@ -496,7 +560,10 @@
       .slide_europe {
         .slide_europe_content {
           height: auto;
-          flex-direction: column;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
 
           .slide_europe_img {
             max-width: none;
@@ -572,7 +639,9 @@
                 ul {
                   li {
                     max-width: 50%;
-                    flex: 1 1 50%;
+                    -webkit-box-flex: 1;
+                        -ms-flex: 1 1 50%;
+                            flex: 1 1 50%;
                   }
                 }
               }
@@ -617,7 +686,9 @@
       .concrete_img_elem {
         max-width: 45%;
         width: 45%;
-        flex: 1 1 100%;
+        -webkit-box-flex: 1;
+            -ms-flex: 1 1 100%;
+                flex: 1 1 100%;
         &:nth-child(3n+3) {
           margin-right: rem(10px);
         }
@@ -675,7 +746,9 @@
       .sentence_content {
         .sentence_elem {
           margin-right: 0;
-          flex: 1 1 100%;
+          -webkit-box-flex: 1;
+              -ms-flex: 1 1 100%;
+                  flex: 1 1 100%;
           .sentence_text {
             h2 {
               font-size: rem(28px);
@@ -685,7 +758,10 @@
             }
           }
           &:nth-child(2), &:nth-child(3) {
-            flex-direction: column;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
             .sentence_img {
               max-height: rem(254px);
             }
@@ -705,8 +781,13 @@
         font-size: rem(16px);
       }
       form {
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         input {
           text-align: center;
           margin-bottom: rem(15px);
@@ -724,7 +805,10 @@
       .footer_wrap {
         .left_footer {
           ul {
-            flex-direction: column;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
             li {
               margin-left: 0;
               margin-bottom: rem(10px);
@@ -776,7 +860,9 @@
           }
           .info_img_wrap {
             .info_img {
-              flex: 1 1 100%;
+              -webkit-box-flex: 1;
+                  -ms-flex: 1 1 100%;
+                      flex: 1 1 100%;
               max-width: 100%;
               height: rem(200px);
               &:nth-child(2) {
@@ -805,12 +891,19 @@
   .contacts_wrap {
     .contacts_content {
       .contacts_info {
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         text-align: center;
       }
       .social {
-        flex-direction: column;
-        justify-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         margin-left: 0;
         .btn {
           margin-top: rem(15px);
@@ -881,9 +974,16 @@
         }
       }
       .visa_usa_info {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         text-align: center;
         padding: 0;
         .visa_usa_form {
@@ -926,7 +1026,9 @@
           padding: 0;
           .img_elem {
             margin: 0 rem(5px) rem(20px);
-            flex: 1 1 40%;
+            -webkit-box-flex: 1;
+                -ms-flex: 1 1 40%;
+                    flex: 1 1 40%;
           }
         }
       }
@@ -979,6 +1081,7 @@
       .america_content {
         .container_visa {
           .btn_form {
+            -webkit-transition: top .4s .3s;
             transition: top .4s .3s;
             &.active{
               top: rem(-30px);
@@ -1014,7 +1117,9 @@
       .france_day_img {
         .day_img_elem {
           max-width: none;
-          flex: 1 1 100%;
+          -webkit-box-flex: 1;
+              -ms-flex: 1 1 100%;
+                  flex: 1 1 100%;
           margin-bottom: rem(5px);
         }
       }
@@ -1023,14 +1128,20 @@
   //CONTACTS
   .contacts_wrap {
     padding: rem(15px);
-    align-self: flex-end;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
     .contacts_content {
       .contacts_info {
         padding: 0 rem(15px);
       }
       .social {
-        flex-direction: column;
-        justify-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         margin-left: 0;
         .btn {
           margin-top: rem(15px);
@@ -1065,7 +1176,9 @@
                 ul {
                   li {
                     max-width: 100%;
-                    flex: 1 1 100%;
+                    -webkit-box-flex: 1;
+                        -ms-flex: 1 1 100%;
+                            flex: 1 1 100%;
                   }
                 }
               }
@@ -1108,7 +1221,9 @@
       .concrete_img_elem {
         max-width: none;
         width: 100%;
-        flex: 1 1 100%;
+        -webkit-box-flex: 1;
+            -ms-flex: 1 1 100%;
+                flex: 1 1 100%;
         margin-right: auto;
         &:nth-child(3n+3) {
           margin-right: auto;
@@ -1202,7 +1317,8 @@
                   display: block;
                   visibility: visible;
                   opacity: 1;
-                  transform: scale(1);
+                  -webkit-transform: scale(1);
+                          transform: scale(1);
                 }
               }
               .menu_drop {
@@ -1212,9 +1328,16 @@
                 visibility: hidden;
                 opacity: 0;
                 width: 100%;
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
-                flex-direction: column;
-                transform: scale(.1);
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                        flex-direction: column;
+                -webkit-transform: scale(.1);
+                        transform: scale(.1);
+                -webkit-transition: .4s;
                 transition: .4s;
               }
             }
@@ -1228,11 +1351,14 @@
     .container {
       .top_section_wrap {
         .top_content {
+          -webkit-transition: .4s;
           transition: .4s;
           &:hover {
+            -webkit-transition: .4s;
             transition: .4s;
             .content {
               bottom: 0;
+              -webkit-transition: bottom .4s;
               transition: bottom .4s;
               .content_elem {
                 .line_home {
@@ -1252,24 +1378,31 @@
           img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            -o-object-fit: cover;
+               object-fit: cover;
           }
           .content {
             position: absolute;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
             padding: rem(50px) rem(70px);
             width: 100%;
             height: 100%;
             bottom: -63%;
+            -webkit-transition: bottom .4s;
             transition: bottom .4s;
             .content_elem {
               .line_home {
-                transition-delay: .1s;
+                -webkit-transition-delay: .1s;
+                        transition-delay: .1s;
                 left: calc(50% - 25px);
                 margin-bottom: rem(15px);
+                -webkit-transition: .4s;
                 transition: .4s;
                 span {
                   visibility: hidden;
+                  -webkit-transition: .4s;
                   transition: .4s;
                   opacity: 0;
                 }
@@ -1283,6 +1416,7 @@
                 font-size: rem(18px);
                 //margin-bottom: rem(30px);
                 opacity: 0;
+                -webkit-transition: color .4s, opacity .4s .4s, left .4s .4s, background-color .4s;
                 transition: color .4s, opacity .4s .4s, left .4s .4s, background-color .4s;
               }
             }
