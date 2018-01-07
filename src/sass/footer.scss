@@ -72,12 +72,14 @@
           align-self: flex-end;
           align-items: center;
           margin-bottom: rem(20px);
+          overflow: hidden;
           i {
             bottom: rem(10px);
             position: absolute;
             font-size: rem(35px);
             align-items: center;
             color: $orange_color;
+            animation: arrowUp 2s infinite;
             &:last-child {
               top: rem(5px);
             }
@@ -96,5 +98,18 @@
         }
       }
     }
+  }
+}
+
+@keyframes arrowUp {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(-4px);
+  }
+
+  40% {
+    transform: translateY(20px);
+  }
+  60% {
+    transform: translateY(10px);
   }
 }

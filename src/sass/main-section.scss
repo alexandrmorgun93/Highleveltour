@@ -66,6 +66,7 @@
         align-self: center;
         font-size: rem(20px);
         color: $orange_color;
+        animation: arrowUp 2s infinite;
         &::before {
           @include before_fig(rem(1px), rem(50px), #fff);
           top: rem(-50px);
@@ -82,3 +83,7 @@
     }
   }
 }
+
+//@keyframes {
+//
+//}
