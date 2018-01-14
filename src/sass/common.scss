@@ -1,3 +1,8 @@
+
+html {
+  font-size: 0.8334vw;
+}
+
 .container {
   max-width: rem(1520px);
   width: 100%;
@@ -27,11 +32,11 @@
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-transition: background-color .3s, color .4s;
   transition: background-color .3s, color .4s;
   &:hover {
@@ -72,8 +77,8 @@
   background-color: $orange_color;
   span {
     position: absolute;
-    left:0;
-    top:rem(3px);
+    left: 0;
+    top: rem(3px);
     width: rem(279px);
     height: rem(1px);
     background-color: $orange_color;
@@ -102,8 +107,8 @@
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     .contacts_title {
       font-family: $Sansus_Webissimo;
       font-size: rem(30px);
@@ -135,10 +140,10 @@
       display: -ms-flexbox;
       display: flex;
       -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+      flex-wrap: wrap;
       -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
       padding: 0 rem(55px);
       .contacts_email, .contacts_phone {
         display: -webkit-box;
@@ -146,8 +151,8 @@
         display: flex;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
         a {
           font-family: $Sansus_Webissimo;
           color: $black_color;
@@ -169,8 +174,8 @@
       display: flex;
       position: relative;
       -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
       margin-left: rem(50px);
       a {
         color: $orange_color;
@@ -181,7 +186,7 @@
         transition: transform .4s, -webkit-transform .4s;
         &:hover {
           -webkit-transform: scale(1.2);
-                  transform: scale(1.2);
+          transform: scale(1.2);
         }
       }
       .btn {
